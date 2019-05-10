@@ -1,0 +1,28 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 150px;
+  justify-content: space-between;
+}
+
+.password {
+  width: 100%;
+  input {
+    position: absolute;
+    width : 200px;
+  }
+  button {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    color: black;
+    left: 170px;
+  }
+}
+
+#submit-login {
+  margin-top: 10px;
+  width: 100px;
+  height: 30px;
+}
