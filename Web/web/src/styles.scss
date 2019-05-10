@@ -1,7 +1,13 @@
+@import "assets/colors";
 // global style
 
 * {
   font-family: 'Quicksand', sans-serif;
+  background-color: #F2ECD6;
+  background-image: url("assets/pictures/dirt-film-simplified.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
 }
 
 input {
@@ -14,7 +20,7 @@ input {
 }
 
 button {
-  background-color: #FF620B;
+  background-color: $orange;
   border: 1px solid transparent;
   border-radius: 20px;
   color: white;
