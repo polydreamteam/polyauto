@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="background">
+    <div class="login-form">
+      <label for="login">Nom d'utilisateur</label>
+      <input  [(ngModel)]="userName" type="text" id="login" name="login">
+      <label for="password">Mot de passe</label>
+      <div class="password">
+        <input [(ngModel)]="password" #passwordInput type="password" id="password" name="password">
+        <button (click)="changeInput(passwordInput)"><fa-icon [icon]="faEye"></fa-icon></button>
+      </div>
+      <button id="submit-login" (click)="submit()">Se connecter</button>
+    </div>
+  </div>
+</div>
+
+
+

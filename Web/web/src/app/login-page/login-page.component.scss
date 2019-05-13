@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top : 50px;
+}
+
+.background {
+  background-image: url("../../assets/pictures/polyauto.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 150px;
+  justify-content: space-between;
+}
+
+.password {
+  width: 100%;
+  input {
+    position: absolute;
+    width : 188px;
+  }
+  button {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    color: black;
+    left: 170px;
+  }
+}
+
+#submit-login {
+  margin-top: 10px;
+  width: 100px;
+  height: 30px;
+}
