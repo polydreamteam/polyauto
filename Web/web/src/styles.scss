@@ -3,12 +3,16 @@
 
 * {
   font-family: 'Quicksand', sans-serif;
+}
+
+body {
   background-color: #F2ECD6;
 }
 
 input {
   border: 1px solid black;
   border-radius: 20px;
+  padding-left: 10px;
   &:focus {
     border: 1.5px solid black;
     outline: none;

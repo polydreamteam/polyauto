@@ -17,4 +17,5 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl("/login");
   }
 
+  //TODO if logged in if logged out affichage page acceuil différente
 }
