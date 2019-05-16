@@ -32,4 +32,8 @@ export class HomeComponent implements OnInit {
     //TODO : API call to get available cars + coordonnés GPS + remplir lats et longs
   }
 
+  openModal() {
+    //TODO: Open a modal with researches elements
+  }
+
 }

@@ -28,7 +28,23 @@
 }
 
 .map {
+  position: relative;
+  .shadow {
+    position: absolute;
+    height: 600px;
+    width: 100%;
+    color: $beige;
+    background: radial-gradient(transparent, $beige);
+    z-index: 1;
+    display: flex;
+    button {
+      height: 160px;
+      border-radius: 50%;
+      font-size: 30px;
+      margin: 20px;
+    }
+  }
   agm-map {
-    height: 400px;
+    height: 600px;
   }
 }
