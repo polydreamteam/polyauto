@@ -4,13 +4,6 @@
 </div>
 
 <div *ngIf="connected">
-  <div class="title">
-    <img src="../../assets/pictures/polyauto.png" alt="polyauto"/>
-  </div>
-  <div class="mon-profil">
-    <div class="name">Nom Prénom</div>
-    <fa-icon [icon]="faUser"></fa-icon>
-  </div>
 
   <div class="map">
     <agm-map [latitude]="lat[0]" [longitude]="long[0]" [zoom]="zoom">
