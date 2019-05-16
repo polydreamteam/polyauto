@@ -1,6 +1,6 @@
-<div class="navbar">
-  <a class="menu">DECONNEXION</a>
-  <a class="menu">MON PROFIL</a>
-  <a class="menu">RECHERCHER</a>
-  <img src="../../assets/pictures/polyauto.png" alt="polyauto"/>
+<div *ngIf="isConnected" class="navbar">
+  <a [routerLink]="['/login']" class="menu">DECONNEXION</a>
+  <a [routerLink]="['/login']" [ngClass]="profilClass">MON PROFIL</a>
+  <a [routerLink]="['/']" [ngClass]="rechercheClass">RECHERCHER</a>
+  <img [routerLink]="['/']" src="../../assets/pictures/polyauto.png" alt="polyauto"/>
 </div>

@@ -11,6 +11,7 @@ import { AgmCoreModule } from '@agm/core';
 import { NavbarComponent } from './navbar/navbar.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     FormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAbtGPghuLoSfx-xpNdiu_DqUg3L5VlJRI'
-    }),
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
