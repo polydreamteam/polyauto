@@ -1,3 +1,4 @@
+@import "../../assets/colors.scss";
 
 .logo {
   display: flex;
@@ -13,4 +14,21 @@
 
 .loginBtn {
   font-size: 25px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px;
+  img {
+    width: 300px;
+  }
+}
+
+.map {
+  agm-map {
+    height: 400px;
+  }
 }

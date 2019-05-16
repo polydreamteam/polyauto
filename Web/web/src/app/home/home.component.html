@@ -1,4 +1,22 @@
-<div class="logo">
+<div *ngIf="!connected" class="logo">
   <img src="../../assets/pictures/polyauto.png" alt="polyauto"/>
-  <button class="loginBtn"(click)="goToLogin()">Connection</button>
+  <button class="loginBtn" (click)="goToLogin()">Connection</button>
+</div>
+
+<div *ngIf="connected">
+  <div class="title">
+    <img src="../../assets/pictures/polyauto.png" alt="polyauto"/>
+  </div>
+  <div class="mon-profil">
+    <div class="name">Nom Prénom</div>
+    <fa-icon [icon]="faUser"></fa-icon>
+  </div>
+
+  <div class="map">
+    <agm-map [latitude]="lat[0]" [longitude]="long[0]" [zoom]="zoom">
+      <div *ngFor="let latitude of lat; let i=index">
+        <agm-marker [latitude]="latitude" [longitude]="long[i]"></agm-marker>
+      </div>
+    </agm-map>
+  </div>
 </div>
