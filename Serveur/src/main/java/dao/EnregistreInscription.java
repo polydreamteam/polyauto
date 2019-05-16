@@ -2,7 +2,6 @@ package dao;
 
 import meserreurs.MonException;
 import javax.persistence.*;
-import metier.InscriptionEntity;
 
 public class EnregistreInscription  {
     private EntityManagerFactory factory;
