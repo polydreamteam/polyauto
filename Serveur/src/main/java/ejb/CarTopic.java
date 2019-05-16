@@ -19,19 +19,19 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import metier.Bookings;
-import metier.BookingsEntity;
+import metier.Cars;
+import metier.CarsEntity;
 
 /**
- * Message-Driven Bean implementation class for: BookingTopic
+ * Message-Driven Bean implementation class for: CarTopic
  */
 // On se connecte à la file d'attente InscriptionTopic
 @MessageDriven(activationConfig = {
         @ActivationConfigProperty(propertyName = "destination",
-                propertyValue = "java:jboss/exported/topic/BookingTopic"),
+                propertyValue = "java:jboss/exported/topic/CarTopic"),
         @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Topic")},
-        mappedName = "BookingTopic")
-public class BookingTopic implements MessageListener {
+        mappedName = "CarTopic")
+public class CarTopic implements MessageListener {
 
     @Resource
     private MessageDrivenContext context;
@@ -39,7 +39,7 @@ public class BookingTopic implements MessageListener {
     /*
      * Default constructor.
      */
-    public BookingTopic() {
+    public CarTopic() {
         // TODO Auto-generated constructor stub
     }
 
@@ -53,7 +53,7 @@ public class BookingTopic implements MessageListener {
         try {
             // On transforme le message en demande d'inscription
             ObjectMessage objectMessage = (ObjectMessage) message;
-            Bookings booking = (Bookings) objectMessage.getObject();
+            Cars car = (Cars) objectMessage.getObject();
 
             if (message != null) {
                 // On insère cette demande d'inscription dans la base de données
@@ -63,15 +63,15 @@ public class BookingTopic implements MessageListener {
                 try {
 
                     // on construit un objet Entity
-                    BookingsEntity bookingEntity = new BookingsEntity();
+                    CarsEntity carEntity = new CarsEntity();
                     // on tansfère les données reçues dans l'objet Entity
-                    bookingEntity.setIdBooking(booking.getIdBooking());
-                    bookingEntity.setDateDown(booking.getDateDown());
-                    bookingEntity.setDateUp(booking.getDateUp());
-                    bookingEntity.setStatus(booking.getStatus());
+                    carEntity.setIdCar(car.getIdCar());
+                    carEntity.setLat(car.getLat());
+                    carEntity.setLon(car.getLon());
+                    carEntity.setModel(car.getModel());
+                    carEntity.setStatus(car.getStatus());
                     Service aServ = new Service();
-                    aServ.insertObject(bookingEntity);
-
+                    aServ.insertObject(carEntity);
                 } catch (NamingException er) {
                     System.out.println("Message Naming  :" + er.getMessage());
                     EcritureErreur(er.getMessage());

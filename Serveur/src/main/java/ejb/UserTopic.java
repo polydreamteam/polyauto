@@ -19,19 +19,18 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import metier.Bookings;
-import metier.BookingsEntity;
+import metier.*;
 
 /**
- * Message-Driven Bean implementation class for: BookingTopic
+ * Message-Driven Bean implementation class for: UserTopic
  */
 // On se connecte à la file d'attente InscriptionTopic
 @MessageDriven(activationConfig = {
         @ActivationConfigProperty(propertyName = "destination",
-                propertyValue = "java:jboss/exported/topic/BookingTopic"),
+                propertyValue = "java:jboss/exported/topic/UserTopic"),
         @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Topic")},
-        mappedName = "BookingTopic")
-public class BookingTopic implements MessageListener {
+        mappedName = "UserTopic")
+public class UserTopic implements MessageListener {
 
     @Resource
     private MessageDrivenContext context;
@@ -39,7 +38,7 @@ public class BookingTopic implements MessageListener {
     /*
      * Default constructor.
      */
-    public BookingTopic() {
+    public UserTopic() {
         // TODO Auto-generated constructor stub
     }
 
@@ -53,7 +52,7 @@ public class BookingTopic implements MessageListener {
         try {
             // On transforme le message en demande d'inscription
             ObjectMessage objectMessage = (ObjectMessage) message;
-            Bookings booking = (Bookings) objectMessage.getObject();
+            Users user = (Users) objectMessage.getObject();
 
             if (message != null) {
                 // On insère cette demande d'inscription dans la base de données
@@ -63,15 +62,15 @@ public class BookingTopic implements MessageListener {
                 try {
 
                     // on construit un objet Entity
-                    BookingsEntity bookingEntity = new BookingsEntity();
-                    // on tansfère les données reçues dans l'objet Entity
-                    bookingEntity.setIdBooking(booking.getIdBooking());
-                    bookingEntity.setDateDown(booking.getDateDown());
-                    bookingEntity.setDateUp(booking.getDateUp());
-                    bookingEntity.setStatus(booking.getStatus());
+                    UsersEntity userEntity = new UsersEntity();
+                    userEntity.setFirstname(user.getFirstName());
+                    userEntity.setLastname(user.getLastName());
+                    userEntity.setIdUser(user.getIdUser());
+                    userEntity.setLogin(user.getLogin());
+                    userEntity.setPassword(user.getPassword());
+                    userEntity.setNote(user.getNote());
                     Service aServ = new Service();
-                    aServ.insertObject(bookingEntity);
-
+                    aServ.insertObject(userEntity);
                 } catch (NamingException er) {
                     System.out.println("Message Naming  :" + er.getMessage());
                     EcritureErreur(er.getMessage());

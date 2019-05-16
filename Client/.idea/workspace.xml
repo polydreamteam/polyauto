@@ -4,8 +4,10 @@
     <list default="true" id="343f1d35-6995-49b6-a125-1a79a310f2d3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Serveur/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Serveur/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Serveur/src/main/java/dao/EnregistreInscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Serveur/src/main/java/dao/saveBooking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Serveur/src/main/java/ejb/DemandeInscriptionTopic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Serveur/src/main/java/dao/EntityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Serveur/src/main/java/dao/EntityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Serveur/src/main/java/dao/saveBooking.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Serveur/src/main/java/ejb/BookingTopic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Serveur/src/main/java/ejb/BookingTopic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Serveur/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Serveur/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,6 +87,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Client" type="b2602c69:ProjectViewProjectNode" />
@@ -181,7 +191,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3432000" />
+    <option name="totallyTimeSpent" value="4112000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="31" width="1926" height="1003" extended-state="6" />
