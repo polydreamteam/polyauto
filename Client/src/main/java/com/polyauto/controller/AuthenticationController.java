@@ -4,6 +4,7 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
 import com.google.common.hash.Hashing;
+import com.polyauto.auth.Authenticator;
 import com.polyauto.exceptions.InternalServerErrorException;
 import com.polyauto.exceptions.UnauthorizedException;
 import com.polyauto.utilities.GenericResponse;
@@ -19,6 +20,7 @@ import com.polyauto.entities.*;
 import com.polyauto.repositories.*;
 
 import java.nio.charset.StandardCharsets;
+import java.util.Date;
 
 @RestController
 public class AuthenticationController
@@ -49,8 +51,6 @@ public class AuthenticationController
 
         GenericResponse response = new GenericResponse();
 
-
-
         try {
             Algorithm algorithm = Algorithm.HMAC256(env.getProperty("polyauto.secretKey"));
 
@@ -61,8 +61,13 @@ public class AuthenticationController
                     .withClaim("userId",user.getIdUser())
                     .withClaim("verificationKey",userKey)
                     .withIssuer("polyauto")
+                    .withIssuedAt(new Date())
                     .sign(algorithm);
             response.addToContent("token",token);
+
+            Authenticator.verifyToken(token);
+
+
             return response;
 
         } catch (JWTCreationException exception){
