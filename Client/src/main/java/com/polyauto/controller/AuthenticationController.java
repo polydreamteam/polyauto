@@ -1,8 +1,13 @@
 package com.polyauto.controller;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.JWTCreationException;
 import com.google.common.hash.Hashing;
+import com.polyauto.exceptions.InternalServerErrorException;
 import com.polyauto.exceptions.UnauthorizedException;
 import com.polyauto.utilities.GenericResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +19,6 @@ import com.polyauto.entities.*;
 import com.polyauto.repositories.*;
 
 import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
 
 @RestController
 public class AuthenticationController
@@ -28,7 +32,7 @@ public class AuthenticationController
     @RequestMapping(method = RequestMethod.POST,value="/login",produces="application/json")
     public GenericResponse login(@RequestParam String login, @RequestParam String password) throws RuntimeException
     {
-        //Algorithm algorithmHS = Algorithm.HMAC256(env.getProperty("polyauto.secretKey"));
+        //
         UsersEntity user =  usersRepository.findByLogin(login);
 
         if(user == null)
@@ -45,8 +49,25 @@ public class AuthenticationController
 
         GenericResponse response = new GenericResponse();
 
-        response.addToContent("test","coucou");
-        return response;
-    }
 
+
+        try {
+            Algorithm algorithm = Algorithm.HMAC256(env.getProperty("polyauto.secretKey"));
+
+            String userKey = Hashing.sha256().hashString(login+user.getIdUser()+env.getProperty("polyauto.verificationKey"), StandardCharsets.UTF_8).toString();
+
+            String token = JWT.create()
+                    .withClaim("user",login)
+                    .withClaim("userId",user.getIdUser())
+                    .withClaim("verificationKey",userKey)
+                    .withIssuer("polyauto")
+                    .sign(algorithm);
+            response.addToContent("token",token);
+            return response;
+
+        } catch (JWTCreationException exception){
+            System.out.println(exception.getMessage());
+            throw new InternalServerErrorException();
+        }
+    }
 }
