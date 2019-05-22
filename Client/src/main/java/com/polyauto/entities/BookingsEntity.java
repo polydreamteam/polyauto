@@ -11,6 +11,8 @@ public class BookingsEntity {
     private byte status;
     private Date dateUp;
     private Date dateDown;
+    private int idCar;
+    private int idUser;
 
     @Id
     @Column(name = "idBooking")
@@ -67,5 +69,25 @@ public class BookingsEntity {
     public int hashCode() {
 
         return Objects.hash(idBooking, status, dateUp, dateDown);
+    }
+
+    @Basic
+    @Column(name = "idCar")
+    public int getIdCar() {
+        return idCar;
+    }
+
+    public void setIdCar(int idCar) {
+        this.idCar = idCar;
+    }
+
+    @Basic
+    @Column(name = "idUser")
+    public int getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
     }
 }
