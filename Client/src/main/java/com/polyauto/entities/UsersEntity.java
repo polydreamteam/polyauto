@@ -1,5 +1,7 @@
 package com.polyauto.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -34,6 +36,7 @@ public class UsersEntity {
     }
 
     @Basic
+    @JsonIgnore
     @Column(name = "password")
     public String getPassword() {
         return password;
