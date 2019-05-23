@@ -21,17 +21,19 @@ import java.util.Date;
 
 import metier.Bookings;
 import metier.BookingsEntity;
+import metier.Cars;
+import metier.Users;
 
 /**
- * Message-Driven Bean implementation class for: BookingTopic
+ * Message-Driven Bean implementation class for: PolyAutoTopic
  */
 // On se connecte à la file d'attente InscriptionTopic
 @MessageDriven(activationConfig = {
         @ActivationConfigProperty(propertyName = "destination",
-                propertyValue = "java:jboss/exported/topic/BookingTopic"),
+                propertyValue = "java:jboss/exported/topic/PolyAutoTopic"),
         @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Topic")},
-        mappedName = "BookingTopic")
-public class BookingTopic implements MessageListener {
+        mappedName = "PolyAutoTopic")
+public class PolyAutoTopic implements MessageListener {
 
     @Resource
     private MessageDrivenContext context;
@@ -39,7 +41,7 @@ public class BookingTopic implements MessageListener {
     /*
      * Default constructor.
      */
-    public BookingTopic() {
+    public PolyAutoTopic() {
         // TODO Auto-generated constructor stub
     }
 
@@ -49,11 +51,13 @@ public class BookingTopic implements MessageListener {
     public void onMessage(Message message)  {
         // TODO Auto-generated method stub
         // On gère le message récupéré dans le topic
+        if (!(message instanceof ObjectMessage)){
+            return ;
+        }
 
         try {
             // On transforme le message en demande d'inscription
             ObjectMessage objectMessage = (ObjectMessage) message;
-            Bookings booking = (Bookings) objectMessage.getObject();
 
             if (message != null) {
                 // On insère cette demande d'inscription dans la base de données
@@ -61,16 +65,15 @@ public class BookingTopic implements MessageListener {
                 message = null;
 
                 try {
-
-                    // on construit un objet Entity
-                    BookingsEntity bookingEntity = new BookingsEntity();
-                    // on tansfère les données reçues dans l'objet Entity
-                    bookingEntity.setIdBooking(booking.getIdBooking());
-                    bookingEntity.setDateDown(booking.getDateDown());
-                    bookingEntity.setDateUp(booking.getDateUp());
-                    bookingEntity.setStatus(booking.getStatus());
                     Service aServ = new Service();
-                    aServ.insertObject(bookingEntity);
+                    if (objectMessage.getObject() instanceof Bookings) {
+                        aServ.insertBooking((Bookings) objectMessage.getObject());
+                    } else if (objectMessage.getObject() instanceof Users) {
+                        aServ.insertUser((Users) objectMessage.getObject());
+                    } else if (objectMessage.getObject() instanceof Cars) {
+                        aServ.insertCar((Cars) objectMessage.getObject());
+                    }
+
 
                 } catch (NamingException er) {
                     System.out.println("Message Naming  :" + er.getMessage());
@@ -78,18 +81,17 @@ public class BookingTopic implements MessageListener {
                 } catch (MonException e) {
                     EcritureErreur(e.getMessage());
                     System.out.println("Message MonException :" + e.getMessage());
+                } catch (JMSException  e) {
+                    e.printStackTrace();
+                    System.err.println("JMSException in onMessage(): " + e.getMessage());
+                    EcritureErreur(e.getMessage());
                 } catch (Exception ex) {
                     System.out.println("Message Excep :" + ex.getMessage());
                     EcritureErreur(ex.getMessage());
                 }
             }
 
-        }   catch (JMSException  e) {
-            e.printStackTrace();
-            System.err.println("JMSException in onMessage(): " + e.getMessage());
-            EcritureErreur(e.getMessage());
-        }
-        catch (Exception ex) {
+        } catch (Exception ex) {
             System.out.println("Erreur Cast  :"+ ex.getMessage());
             EcritureErreur(ex.getMessage());
         }
