@@ -6,12 +6,14 @@
 <div *ngIf="connected">
 
   <div class="map">
-    <div class="shadow">
-      <button (click)="openModal()">Rechercher</button>
-    </div>
+    <button (click)="openModal()">Rechercher</button>
     <agm-map [latitude]="lat[0]" [longitude]="long[0]" [zoom]="zoom">
       <div *ngFor="let latitude of lat; let i=index">
-        <agm-marker [latitude]="latitude" [longitude]="long[i]"></agm-marker>
+        <agm-marker [latitude]="latitude" [longitude]="long[i]">
+          <agm-info-window [disableAutoPan]="true">
+            Car info component to display
+          </agm-info-window>
+        </agm-marker>
       </div>
     </agm-map>
   </div>

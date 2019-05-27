@@ -29,6 +29,14 @@
 
 .map {
   position: relative;
+  button {
+    height: 160px;
+    border-radius: 50%;
+    font-size: 30px;
+    margin: 20px;
+    position: absolute;
+    z-index: 1;
+  }
   .shadow {
     position: absolute;
     height: 600px;
@@ -37,12 +45,7 @@
     background: radial-gradient(transparent, $beige);
     z-index: 1;
     display: flex;
-    button {
-      height: 160px;
-      border-radius: 50%;
-      font-size: 30px;
-      margin: 20px;
-    }
+
   }
   agm-map {
     height: 600px;
