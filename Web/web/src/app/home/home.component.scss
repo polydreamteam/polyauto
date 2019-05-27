@@ -1,3 +1,4 @@
+@import "../../assets/colors.scss";
 
 .logo {
   display: flex;
@@ -13,4 +14,40 @@
 
 .loginBtn {
   font-size: 25px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px;
+  img {
+    width: 300px;
+  }
+}
+
+.map {
+  position: relative;
+  button {
+    height: 160px;
+    border-radius: 50%;
+    font-size: 30px;
+    margin: 20px;
+    position: absolute;
+    z-index: 1;
+  }
+  .shadow {
+    position: absolute;
+    height: 600px;
+    width: 100%;
+    color: $beige;
+    background: radial-gradient(transparent, $beige);
+    z-index: 1;
+    display: flex;
+
+  }
+  agm-map {
+    height: 600px;
+  }
 }

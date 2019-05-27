@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import {faUser} from '@fortawesome/free-solid-svg-icons';
+
+
 
 @Component({
   selector: 'app-home',
@@ -8,14 +11,29 @@ import { Router } from "@angular/router";
 })
 export class HomeComponent implements OnInit {
 
+  connected: boolean = true
+  faUser = faUser
+  lat: number[] = [45.779246, 45.774679 ]
+  long: number[] = [4.868209, 4.876094]
+  zoom: number = 15
+
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.getAvailableCars();
   }
+
 
   goToLogin() {
-    this.router.navigateByUrl("/login");
+    this.router.navigateByUrl("/login")
   }
 
-  //TODO if logged in if logged out affichage page acceuil différente
+  getAvailableCars() {
+    //TODO : API call to get available cars + coordonnés GPS + remplir lats et longs
+  }
+
+  openModal() {
+    //TODO: Open a modal with researches elements
+  }
+
 }
