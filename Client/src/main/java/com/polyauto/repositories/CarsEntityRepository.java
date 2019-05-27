@@ -10,4 +10,5 @@ import java.util.List;
 public interface CarsEntityRepository extends JpaRepository<CarsEntity, Integer>
 {
     List<CarsEntity> findAvailableCars();
+    CarsEntity isCarAvalaible(int cardId);
 }

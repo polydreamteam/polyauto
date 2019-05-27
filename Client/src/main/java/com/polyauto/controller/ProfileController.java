@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @RestController
 public class ProfileController
@@ -38,6 +37,20 @@ public class ProfileController
         GenericResponse response = new GenericResponse();
         response.addToContent("user",user);
         response.addToContent("bookings",bookings);
+        return response;
+    }
+
+    @RequestMapping(method = RequestMethod.GET,value="/getProfileSimple",produces="application/json")
+    public GenericResponse getProfileSimple(@RequestParam String token) throws RuntimeException
+    {
+        DecodedJWT jwt_decoded = Authenticator.verifyAndDecodeToken(token);
+        int userId = Integer.parseInt(jwt_decoded.getClaim("userId").asString());
+
+        UsersEntity user = usersRepository.findByIdUser(userId);
+
+        GenericResponse response = new GenericResponse();
+
+        response.addToContent("user",user);
         return response;
     }
 }

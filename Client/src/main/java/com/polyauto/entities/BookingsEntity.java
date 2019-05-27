@@ -5,6 +5,8 @@ import java.sql.Date;
 import java.util.Objects;
 
 @Entity
+@NamedQuery(name = "BookingsEntity.findUsersOpenedBooking",
+        query = "select b from BookingsEntity b where b.status = 1 AND b.idUser = ?1")
 @Table(name = "bookings", schema = "polyauto", catalog = "")
 public class BookingsEntity {
     private int idBooking;

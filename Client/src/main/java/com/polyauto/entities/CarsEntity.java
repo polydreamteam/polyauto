@@ -6,6 +6,8 @@ import java.util.Objects;
 @Entity
 @NamedQuery(name = "CarsEntity.findAvailableCars",
         query = "select c from CarsEntity c where c.status = 1")
+@NamedQuery(name = "CarsEntity.isCarAvalaible",
+        query = "select c from CarsEntity c where c.status = 1 and c.idCar = ?1")
 @Table(name = "cars", schema = "polyauto", catalog = "")
 public class CarsEntity {
     private int idCar;

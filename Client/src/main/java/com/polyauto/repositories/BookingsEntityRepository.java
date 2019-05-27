@@ -11,4 +11,5 @@ public interface BookingsEntityRepository extends JpaRepository<BookingsEntity, 
 {
     BookingsEntity findByIdBooking(int id);
     List<BookingsEntity> findByIdUser(int idUser);
+    List<BookingsEntity> findUsersOpenedBooking(int idUser);
 }
