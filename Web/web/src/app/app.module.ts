@@ -9,6 +9,7 @@ import {FormsModule} from "@angular/forms";
 import { HomeComponent } from './home/home.component';
 import { AgmCoreModule } from '@agm/core';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CarInfoComponent } from './car-info/car-info.component';
 
 
 
@@ -17,7 +18,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppComponent,
     LoginPageComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    CarInfoComponent
   ],
   imports: [
     BrowserModule,

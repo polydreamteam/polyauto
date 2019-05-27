@@ -11,7 +11,7 @@
       <div *ngFor="let latitude of lat; let i=index">
         <agm-marker [latitude]="latitude" [longitude]="long[i]">
           <agm-info-window [disableAutoPan]="true">
-            Car info component to display
+            <app-car-info></app-car-info>
           </agm-info-window>
         </agm-marker>
       </div>
