@@ -4,6 +4,7 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import com.polyauto.auth.Authenticator;
 import com.polyauto.entities.BookingsEntity;
 import com.polyauto.entities.CarsEntity;
+import com.polyauto.entities.UsersEntity;
 import com.polyauto.exceptions.BadRequestException;
 import com.polyauto.exceptions.UnauthorizedException;
 import com.polyauto.repositories.BookingsEntityRepository;
@@ -68,14 +69,65 @@ public class BookingsController
         BookingsEntity newBooking = new BookingsEntity();
         newBooking.setIdUser(Integer.valueOf(userId));
         newBooking.setIdCar(Integer.valueOf(idCar));
-        newBooking.setStatus(Byte.parseByte("1"));
+        newBooking.setStatus(Byte.parseByte("1")); //TODO : Also update car status ?
+
+        //TODO : WARNING - Un book ouvert a un status de 1, mais les voitures ont un status de 1 de base dans la bd, normale?
 
         java.util.Date utilDate = new java.util.Date();
         newBooking.setDateUp(new Date(utilDate.getTime()));
 
-        DbManager.saveBooking(newBooking);
+        //TODO : Faire marcher la sauvegarde en DB
+        //DbManager.saveBooking(newBooking);
 
         GenericResponse response = new GenericResponse();
+
+        //Used to check result while waiting for DB updates to work
+        response.addToContent("booking", newBooking);
+
         return response;
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value="/closeBooking",produces="application/json")
+    public GenericResponse closeBooking(@RequestParam String token,
+                                        @RequestParam String bookingId) throws Exception
+    {
+        //Identify and get user id
+        DecodedJWT jwt_decoded = Authenticator.verifyAndDecodeToken(token);
+        int userId = Integer.parseInt(jwt_decoded.getClaim("userId").asString());
+
+        //Find book by user id
+        BookingsEntity booking = bookingsRepository.findByIdBooking(Integer.valueOf(bookingId));
+
+        //Error if not existent
+        if (booking == null) {
+            //TODO : Vrai message erreur
+            throw new BadRequestException();
+        }
+
+        List<BookingsEntity> userOpenedBookings = bookingsRepository.findUsersOpenedBooking(userId);
+
+        //Error if not opened by user
+        if (!userOpenedBookings.contains(booking)) {
+            //TODO : Vrai message erreur
+            throw new BadRequestException();
+        }
+
+        //Close the booking
+        booking.setStatus(Byte.parseByte("0")); //TODO : Also update car status ?
+
+        java.util.Date utilDate = new java.util.Date();
+        booking.setDateDown(new Date(utilDate.getTime()));
+
+        //Save changes
+        //TODO : Faire marcher la sauvegarde en DB
+        //DbManager.updateBooking(booking);
+
+        GenericResponse response = new GenericResponse();
+
+        //Used to check result while waiting for DB updates to work
+        response.addToContent("booking", booking);
+
+        return response;
+
     }
 }
