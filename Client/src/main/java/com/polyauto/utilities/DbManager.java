@@ -28,8 +28,13 @@ public class DbManager {
         em.persist(entity);
     }
 
-    public static void saveProfile(UsersEntity entity) throws Exception
+    public static void updateBooking(BookingsEntity entity) throws Exception
     {
-        em.persist(entity);
+        em.merge(entity);
+    }
+
+    public static void updateProfile(UsersEntity entity) throws Exception
+    {
+        em.merge(entity);
     }
 }

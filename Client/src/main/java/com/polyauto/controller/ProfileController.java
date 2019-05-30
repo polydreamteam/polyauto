@@ -85,8 +85,8 @@ public class ProfileController
         if (note != null)
             user.setNote(note);
 
-        //TODO : Fix la sauvegarde en DB
-        DbManager.saveProfile(user);
+        //TODO : Faire marcher la sauvegarde en DB
+        DbManager.updateProfile(user);
 
         //send back the updated user
         GenericResponse response = new GenericResponse();
