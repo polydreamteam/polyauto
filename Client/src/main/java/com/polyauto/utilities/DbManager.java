@@ -1,6 +1,7 @@
 package com.polyauto.utilities;
 
 import com.polyauto.entities.BookingsEntity;
+import com.polyauto.entities.UsersEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +24,11 @@ public class DbManager {
 
 
     public static void saveBooking(BookingsEntity entity) throws Exception
+    {
+        em.persist(entity);
+    }
+
+    public static void saveProfile(UsersEntity entity) throws Exception
     {
         em.persist(entity);
     }
