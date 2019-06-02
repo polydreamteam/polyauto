@@ -7,18 +7,28 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {FormsModule} from "@angular/forms";
 import { HomeComponent } from './home/home.component';
+import { AgmCoreModule } from '@agm/core';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CarInfoComponent } from './car-info/car-info.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent,
+    CarInfoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAbtGPghuLoSfx-xpNdiu_DqUg3L5VlJRI'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
