@@ -13,10 +13,7 @@ import com.polyauto.utilities.GenericResponse;
 import com.polyauto.utilities.RandomString;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.polyauto.entities.*;
 import com.polyauto.repositories.*;
@@ -33,6 +30,7 @@ public class AuthenticationController
     @Autowired
     private UsersEntityRepository usersRepository;
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(method = RequestMethod.POST,value="/login",produces="application/json")
     public GenericResponse login(@RequestParam String login, @RequestParam String password) throws RuntimeException
     {

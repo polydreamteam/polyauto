@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faEye} from '@fortawesome/free-solid-svg-icons';
+import {ConnexionService} from "../connexion.service";
 
 @Component({
   selector: 'app-login-page',
@@ -13,7 +14,7 @@ export class LoginPageComponent implements OnInit {
   userName: string;
   password: string;
 
-  constructor() {
+  constructor(private connexionService: ConnexionService) {
     this.togglePassword = false;
 
   }
@@ -27,6 +28,11 @@ export class LoginPageComponent implements OnInit {
 
   submit() {
   //TODO : send userName and password to login
+    this.connexionService.getConnexion(this.userName, this.password).subscribe(
+      (response) => {
+        localStorage.setItem('token', response.content.token)
+      }
+    );
   }
 
 

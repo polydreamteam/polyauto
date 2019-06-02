@@ -11,7 +11,7 @@ import {faUser} from '@fortawesome/free-solid-svg-icons';
 })
 export class HomeComponent implements OnInit {
 
-  connected: boolean = true
+  connected: boolean = false
   faUser = faUser
   lat: number[] = [45.779246, 45.774679 ]
   long: number[] = [4.868209, 4.876094]
