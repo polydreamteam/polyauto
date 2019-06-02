@@ -1,6 +1,11 @@
 package ejb;
 
+import com.sun.xml.internal.ws.api.message.ExceptionHasMessage;
+import dao.BookingsService;
+import dao.CarsService;
 import dao.Service;
+import dao.UsersService;
+import dto.ObjectMessageSend;
 import meserreurs.MonException;
 
 import javax.annotation.Resource;
@@ -65,15 +70,35 @@ public class PolyAutoTopic implements MessageListener {
                 message = null;
 
                 try {
-                    Service aServ = new Service();
-                    if (objectMessage.getObject() instanceof Bookings) {
-                        aServ.insertBooking((Bookings) objectMessage.getObject());
-                    } else if (objectMessage.getObject() instanceof Users) {
-                        aServ.insertUser((Users) objectMessage.getObject());
-                    } else if (objectMessage.getObject() instanceof Cars) {
-                        aServ.insertCar((Cars) objectMessage.getObject());
+                    ObjectMessageSend objectMessageSend = (ObjectMessageSend) objectMessage.getObject();
+                    Object object = objectMessageSend.getObject();
+
+                    //Obtenir le bon service
+                    Service aServ;
+                    if (object instanceof Bookings) {
+                        aServ = new BookingsService();
+                    } else if (object instanceof Users) {
+                        aServ = new UsersService();
+                    } else if (object instanceof Cars) {
+                        aServ = new CarsService();
+                    }
+                    else{
+                        throw new MonException();
                     }
 
+                    //Appeler la bonne fonction
+                    switch(objectMessageSend.getAction()){
+                        case ObjectMessageSend.INSERT:
+                            aServ.insertObject(object);
+                            break;
+
+                        case ObjectMessageSend.UPDATE:
+                            aServ.updateObject(object);
+                            break;
+
+                        default:
+                            break;
+                    }
 
                 } catch (NamingException er) {
                     System.out.println("Message Naming  :" + er.getMessage());
