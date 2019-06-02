@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a86af9f-4389-4192-9815-9ebf8c665fbe" name="Default Changelist" comment="" />
+    <list default="true" id="4a86af9f-4389-4192-9815-9ebf8c665fbe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,11 +15,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/web/src/app/home/home.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Client/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="791" column="14" lean-forward="true" selection-start-line="791" selection-start-column="14" selection-end-line="791" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -60,6 +71,7 @@
         <option value="$PROJECT_DIR$/Web/web/src/app/car-info/car-info.component.scss" />
         <option value="$PROJECT_DIR$/Web/web/src/app/car-info/car-info.component.ts" />
         <option value="$PROJECT_DIR$/Web/web/src/app/car-info/car-info.component.html" />
+        <option value="$PROJECT_DIR$/Client/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -79,6 +91,17 @@
             <path>
               <item name="polyauto" type="b2602c69:ProjectViewProjectNode" />
               <item name="polyauto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="polyauto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="polyauto" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="polyauto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="polyauto" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="polyauto" type="b2602c69:ProjectViewProjectNode" />
@@ -176,12 +199,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22404000" />
+    <option name="totallyTimeSpent" value="22875000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34161073" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34161073" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -199,7 +223,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.72206706" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -216,6 +240,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Web/web/src/app/app-routing.module.ts">
@@ -389,6 +423,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="791" column="14" lean-forward="true" selection-start-line="791" selection-start-column="14" selection-end-line="791" selection-end-column="14" />
         </state>
       </provider>
     </entry>
