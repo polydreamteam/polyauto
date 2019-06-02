@@ -1,4 +1,20 @@
-<div class="logo">
+<div *ngIf="!connected" class="logo">
   <img src="../../assets/pictures/polyauto.png" alt="polyauto"/>
-  <button class="loginBtn"(click)="goToLogin()">Connection</button>
+  <button class="loginBtn" (click)="goToLogin()">Connection</button>
+</div>
+
+<div *ngIf="connected">
+
+  <div class="map">
+    <button (click)="openModal()">Rechercher</button>
+    <agm-map [latitude]="lat[0]" [longitude]="long[0]" [zoom]="zoom">
+      <div *ngFor="let latitude of lat; let i=index">
+        <agm-marker [latitude]="latitude" [longitude]="long[i]">
+          <agm-info-window [disableAutoPan]="true">
+            <app-car-info></app-car-info>
+          </agm-info-window>
+        </agm-marker>
+      </div>
+    </agm-map>
+  </div>
 </div>
