@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import {faUser} from '@fortawesome/free-solid-svg-icons';
+import {ConnexionService} from "../services/connexion.service";
+import {CarService} from "../services/car.service";
+import {Car} from "../models/car.model";
 
 
 
@@ -11,25 +14,41 @@ import {faUser} from '@fortawesome/free-solid-svg-icons';
 })
 export class HomeComponent implements OnInit {
 
-  connected: boolean = false
-  faUser = faUser
-  lat: number[] = [45.779246, 45.774679 ]
-  long: number[] = [4.868209, 4.876094]
-  zoom: number = 15
+  connected: boolean = false;
+  faUser = faUser;
+  lat: number[] = [];
+  long: number[] = [];
+  availableCars: Car[] = [];
+  zoom: number = 15;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private connexionService: ConnexionService, private carService: CarService) { }
 
   ngOnInit() {
     this.getAvailableCars();
+    this.setConnected();
   }
 
+
+  setConnected() {
+    this.connected = this.connexionService.isConnected();
+  }
 
   goToLogin() {
     this.router.navigateByUrl("/login")
   }
 
   getAvailableCars() {
-    //TODO : API call to get available cars + coordonnés GPS + remplir lats et longs
+    this.carService.getAvailableCar().subscribe(
+      resp => {
+        this.lat = resp.content.avalaibleCars.map(item => item.lat);
+        this.long = resp.content.avalaibleCars.map(item => item.lon);
+        this.availableCars = resp.content.avalaibleCars;
+      },
+      err => {
+        console.log(err)
+      }
+    )
+
   }
 
   openModal() {

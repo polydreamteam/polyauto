@@ -17,5 +17,14 @@ export class ConnexionService {
     return this.httpClient.post<any>('http://localhost:8080/login', params);
   }
 
+  isConnected() {
+    return localStorage.getItem('token') != null;
+  }
+
+  static getToken() {
+    return localStorage.getItem('token');
+  }
+
+
 
 }

@@ -10,8 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { AgmCoreModule } from '@agm/core';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CarInfoComponent } from './car-info/car-info.component';
-import {ConnexionService} from "./connexion.service";
+import {ConnexionService} from "./services/connexion.service";
 import {HttpClientModule} from "@angular/common/http";
+import {CarService} from "./services/car.service";
 
 
 
@@ -35,6 +36,7 @@ import {HttpClientModule} from "@angular/common/http";
   ],
   providers: [
     ConnexionService,
+    CarService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faEye} from '@fortawesome/free-solid-svg-icons';
-import {ConnexionService} from "../connexion.service";
+import {ConnexionService} from "../services/connexion.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login-page',
@@ -14,7 +15,7 @@ export class LoginPageComponent implements OnInit {
   userName: string;
   password: string;
 
-  constructor(private connexionService: ConnexionService) {
+  constructor(private connexionService: ConnexionService, private router: Router) {
     this.togglePassword = false;
 
   }
@@ -30,7 +31,8 @@ export class LoginPageComponent implements OnInit {
   //TODO : send userName and password to login
     this.connexionService.getConnexion(this.userName, this.password).subscribe(
       (response) => {
-        localStorage.setItem('token', response.content.token)
+        localStorage.setItem('token', response.content.token);
+        this.router.navigateByUrl("/");
       }
     );
   }

@@ -2,27 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="343f1d35-6995-49b6-a125-1a79a310f2d3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_api_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Web/web/src/app/connexion.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Client_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Client_war.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Client_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Client_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/polyauto/ClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/polyauto/ClientApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/polyauto/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/polyauto/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/polyauto/controller/CarsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/polyauto/controller/CarsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/polyauto/controller/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/polyauto/controller/ProfileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Web/web/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/connection.actions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/car-info/car-info.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/car-info/car-info.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/car-info/car-info.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/car-info/car-info.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/connexion.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/services/connexion.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/connexion.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/services/connexion.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/home/home.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Web/web/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/http-client.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/connexion.service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/http-client.service.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Web/web/src/app/login-page/login-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/login-page/login-page.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -181,8 +169,8 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
-    <option name="width" value="815" />
-    <option name="height" value="868" />
+    <option name="width" value="977" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
