@@ -12,4 +12,5 @@ public interface CarsEntityRepository extends JpaRepository<CarsEntity, Integer>
     List<CarsEntity> findAvailableCars();
     List<CarsEntity> findNotAvailableCars();
     List<CarsEntity> findWithStatusAndModel(Byte status, int model);
+    CarsEntity isCarAvalaible(int cardId);
 }
