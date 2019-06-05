@@ -1,0 +1,32 @@
+@import "../../assets/colors.scss";
+
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0,0,0,0.5);
+  .modal {
+    background-color: $beige;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .select {
+      border-radius: 20px;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    .radio-buttons {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    .validate {
+      font-size: 20px;
+    }
+  }
+}

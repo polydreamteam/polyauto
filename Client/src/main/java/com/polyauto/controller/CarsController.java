@@ -24,7 +24,29 @@ public class CarsController
         List<CarsEntity> list = carsRepository.findAvailableCars();
 
         GenericResponse response = new GenericResponse();
-        response.addToContent("avalaibleCars",list);
+        response.addToContent("cars",list);
+        return response;
+    }
+
+    @CrossOrigin(origins = "http://localhost:4200")
+    @RequestMapping(method = RequestMethod.GET,value="/getNotAvailableCars",produces="application/json")
+    public GenericResponse getNotAvailableCars()
+    {
+        List<CarsEntity> list = carsRepository.findNotAvailableCars();
+
+        GenericResponse response = new GenericResponse();
+        response.addToContent("cars",list);
+        return response;
+    }
+
+    @CrossOrigin(origins = "http://localhost:4200")
+    @RequestMapping(method = RequestMethod.GET,value="/getWithStatusAndModel",produces="application/json")
+    public GenericResponse getWithStatusAndModel(String status, String model)
+    {
+        List<CarsEntity> list = carsRepository.findWithStatusAndModel(Byte.valueOf(status), Integer.parseInt(model));
+
+        GenericResponse response = new GenericResponse();
+        response.addToContent("cars",list);
         return response;
     }
 }

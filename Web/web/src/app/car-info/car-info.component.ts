@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Car} from "../models/car.model";
+import {CarService} from "../services/car.service";
 
 @Component({
   selector: 'app-car-info',
@@ -11,13 +12,9 @@ export class CarInfoComponent implements OnInit {
 @Input() car : Car;
 
 
-  constructor() { }
+  constructor(public carService: CarService) { }
 
   ngOnInit() {
-    console.log(this.car)
   }
 
-  getCar() {
-  //TODO : request to get car object with lat and long
-  }
 }

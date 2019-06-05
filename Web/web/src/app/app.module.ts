@@ -13,6 +13,7 @@ import { CarInfoComponent } from './car-info/car-info.component';
 import {ConnexionService} from "./services/connexion.service";
 import {HttpClientModule} from "@angular/common/http";
 import {CarService} from "./services/car.service";
+import { ResearchModalComponent } from './research-modal/research-modal.component';
 
 
 
@@ -22,7 +23,8 @@ import {CarService} from "./services/car.service";
     LoginPageComponent,
     HomeComponent,
     NavbarComponent,
-    CarInfoComponent
+    CarInfoComponent,
+    ResearchModalComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,7 @@ import {CarService} from "./services/car.service";
   ],
   providers: [
     ConnexionService,
-    CarService
+    CarService,
   ],
   bootstrap: [AppComponent]
 })

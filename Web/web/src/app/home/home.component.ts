@@ -18,13 +18,14 @@ export class HomeComponent implements OnInit {
   faUser = faUser;
   lat: number[] = [];
   long: number[] = [];
-  availableCars: Car[] = [];
+  cars: any = [];
   zoom: number = 15;
+  displayResearchModal: boolean = false;
 
   constructor(private router: Router, private connexionService: ConnexionService, private carService: CarService) { }
 
   ngOnInit() {
-    this.getAvailableCars();
+    this.getCars(1, null);
     this.setConnected();
   }
 
@@ -37,22 +38,22 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl("/login")
   }
 
-  getAvailableCars() {
-    this.carService.getAvailableCar().subscribe(
-      resp => {
-        this.lat = resp.content.avalaibleCars.map(item => item.lat);
-        this.long = resp.content.avalaibleCars.map(item => item.lon);
-        this.availableCars = resp.content.avalaibleCars;
+
+  getCars(status: number, model: number) {
+    this.carService.filterCars(status, model).subscribe(
+      data => {
+        this.cars = data.content.cars
+        this.lat = data.content.cars.map(item => item.lat)
+        this.long = data.content.cars.map(item => item.lon)
       },
       err => {
         console.log(err)
       }
     )
-
   }
 
-  openModal() {
-    //TODO: Open a modal with researches elements
+  toggleModal() {
+    this.displayResearchModal = !this.displayResearchModal;
   }
 
 }
