@@ -3,7 +3,6 @@ import { Router } from "@angular/router";
 import {faUser} from '@fortawesome/free-solid-svg-icons';
 import {ConnexionService} from "../services/connexion.service";
 import {CarService} from "../services/car.service";
-import {Car} from "../models/car.model";
 
 
 

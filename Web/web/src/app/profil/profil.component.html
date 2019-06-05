@@ -1,0 +1,17 @@
+<div class="profil">
+  <div class="title">
+    <h1>Mon profil</h1>
+    <fa-icon [icon]="faPen" (click)="editProfile()"></fa-icon>
+  </div>
+  <div class="name">{{profil.firstname}}</div>
+  <div class="last-name">{{profil.lastname}}</div>
+  <div class="stars">
+    <div class="yellow-star" *ngFor="let dummy of ' '.repeat(profil.note).split('')"><fa-icon [icon]="faSolidStar"></fa-icon></div>
+    <div class=" no-star" *ngFor="let dummy of ' '.repeat(5-profil.note).split('')"><fa-icon [icon]="faRegularStar"></fa-icon></div>
+  </div>
+
+  <h2>Mes Réservations</h2>
+  <div class="resa">TODO</div>
+
+</div>
+

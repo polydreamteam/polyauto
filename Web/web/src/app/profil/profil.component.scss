@@ -1,0 +1,47 @@
+@import "../../assets/colors";
+
+.profil {
+  background-image: url("../../assets/pictures/driver.svg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position-x: -230px;
+  display: flex;
+  flex-direction: column;
+
+  .title{
+    margin-left: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    fa-icon {
+      margin-left: 10px;
+      cursor: pointer;
+      color: $orange;
+      font-size: 25px;
+    }
+  }
+
+  .name {
+    margin-left: 150px;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .last-name {
+    margin-left: 180px;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .stars {
+    display: flex;
+    margin-left: 120px;
+    font-size: 25px;
+    margin-bottom: 10px;
+    .yellow-star {
+      color: #fff41d;
+    }
+  }
+}
+
+

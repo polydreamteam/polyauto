@@ -3,19 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="343f1d35-6995-49b6-a125-1a79a310f2d3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5bb1afc1-980a-4ad0-86e4-1cf77b92f8b6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5bb1afc1-980a-4ad0-86e4-1cf77b92f8b6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/polyauto/controller/CarsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/polyauto/controller/CarsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/polyauto/entities/CarsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/polyauto/entities/CarsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/polyauto/repositories/CarsEntityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/polyauto/repositories/CarsEntityRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Web/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Web/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Web/web/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/car-info/car-info.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/car-info/car-info.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/car-info/car-info.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/car-info/car-info.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/home/home.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Web/web/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/services/car.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/services/car.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/navbar/navbar.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,7 +70,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/polyauto/repositories/CarsEntityRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -102,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/polyauto/controller/ProfileController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+            <state relative-caret-position="330">
+              <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -217,9 +211,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-9" />
-    <option name="width" value="978" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -426,12 +420,12 @@
       <workItem from="1558985688945" duration="317000" />
       <workItem from="1558986204078" duration="3744000" />
       <workItem from="1559495305380" duration="2197000" />
-      <workItem from="1559649867896" duration="5551000" />
+      <workItem from="1559649867896" duration="5793000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39418000" />
+    <option name="totallyTimeSpent" value="39660000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -443,7 +437,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="848" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8856502" visible="true" weight="0.2751678" />
@@ -631,16 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/polyauto/controller/ProfileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/polyauto/repositories/UsersEntityRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -677,6 +661,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/polyauto/controller/ProfileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-end-line="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
