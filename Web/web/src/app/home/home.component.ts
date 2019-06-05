@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import {faUser} from '@fortawesome/free-solid-svg-icons';
+import {ConnexionService} from "../services/connexion.service";
+import {CarService} from "../services/car.service";
+import {Car} from "../models/car.model";
 
 
 
@@ -11,29 +14,46 @@ import {faUser} from '@fortawesome/free-solid-svg-icons';
 })
 export class HomeComponent implements OnInit {
 
-  connected: boolean = true
-  faUser = faUser
-  lat: number[] = [45.779246, 45.774679 ]
-  long: number[] = [4.868209, 4.876094]
-  zoom: number = 15
+  connected: boolean = false;
+  faUser = faUser;
+  lat: number[] = [];
+  long: number[] = [];
+  cars: any = [];
+  zoom: number = 15;
+  displayResearchModal: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private connexionService: ConnexionService, private carService: CarService) { }
 
   ngOnInit() {
-    this.getAvailableCars();
+    this.getCars(1, null);
+    this.setConnected();
   }
 
+
+  setConnected() {
+    this.connected = this.connexionService.isConnected();
+  }
 
   goToLogin() {
     this.router.navigateByUrl("/login")
   }
 
-  getAvailableCars() {
-    //TODO : API call to get available cars + coordonnés GPS + remplir lats et longs
+
+  getCars(status: number, model: number) {
+    this.carService.filterCars(status, model).subscribe(
+      data => {
+        this.cars = data.content.cars
+        this.lat = data.content.cars.map(item => item.lat)
+        this.long = data.content.cars.map(item => item.lon)
+      },
+      err => {
+        console.log(err)
+      }
+    )
   }
 
-  openModal() {
-    //TODO: Open a modal with researches elements
+  toggleModal() {
+    this.displayResearchModal = !this.displayResearchModal;
   }
 
 }

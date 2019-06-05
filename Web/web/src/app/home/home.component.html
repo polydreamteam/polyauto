@@ -6,15 +6,23 @@
 <div *ngIf="connected">
 
   <div class="map">
-    <button (click)="openModal()">Rechercher</button>
+    <button (click)="toggleModal()">Rechercher</button>
+
     <agm-map [latitude]="lat[0]" [longitude]="long[0]" [zoom]="zoom">
-      <div *ngFor="let latitude of lat; let i=index">
-        <agm-marker [latitude]="latitude" [longitude]="long[i]">
-          <agm-info-window [disableAutoPan]="true">
-            <app-car-info></app-car-info>
-          </agm-info-window>
-        </agm-marker>
-      </div>
+      <agm-marker *ngFor="let latitude of lat; let i=index"
+                  [latitude]="latitude"
+                  [longitude]="long[i]">
+        <agm-info-window
+          [latitude]="latitude"
+          [longitude]="long[i]">
+          <app-car-info [car]="cars[i]"></app-car-info>
+        </agm-info-window>
+      </agm-marker>
     </agm-map>
+
+
   </div>
+
 </div>
+
+<app-research-modal *ngIf="displayResearchModal" (visible)="toggleModal()" (researched)="getCars($event[0], $event[1])"></app-research-modal>
