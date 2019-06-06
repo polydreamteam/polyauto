@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.polyauto</groupId>
-    <artifactId>client</artifactId>
+    <artifactId>Client</artifactId>
     <version>1</version>
     <packaging>war</packaging>
     <name>client</name>
