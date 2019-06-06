@@ -1,4 +1,4 @@
-package com.polyauto.entities;
+package metier;
 
 import java.io.Serializable;
 import java.sql.Date;

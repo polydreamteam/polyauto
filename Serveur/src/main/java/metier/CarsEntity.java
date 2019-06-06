@@ -1,20 +1,9 @@
-package com.polyauto.entities;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
+package metier;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-@NamedQuery(name = "CarsEntity.findAvailableCars",
-        query = "select c from CarsEntity c where c.status = 1")
-@NamedQuery(name = "CarsEntity.findNotAvailableCars",
-        query = "select c from CarsEntity c where c.status = 0")
-@NamedQuery(name = "CarsEntity.findWithStatusAndModel",
-        query = "select c from CarsEntity c where c.status = ?1 and c.model = ?2")
-@NamedQuery(name = "CarsEntity.isCarAvalaible",
-        query = "select c from CarsEntity c where c.status = 1 and c.idCar = ?1")
 @Table(name = "cars", schema = "polyauto", catalog = "")
 public class CarsEntity {
     private int idCar;
@@ -22,7 +11,6 @@ public class CarsEntity {
     private double lat;
     private double lon;
     private byte status;
-    private Collection<BookingsEntity> bookingsByIdCar;
 
     @Id
     @Column(name = "idCar")
@@ -88,17 +76,6 @@ public class CarsEntity {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(idCar, model, lat, lon, status);
-    }
-
-    @JsonIgnore
-    @OneToMany(mappedBy = "car")
-    public Collection<BookingsEntity> getBookingsByIdCar() {
-        return bookingsByIdCar;
-    }
-
-    public void setBookingsByIdCar(Collection<BookingsEntity> bookingsByIdCar) {
-        this.bookingsByIdCar = bookingsByIdCar;
     }
 }

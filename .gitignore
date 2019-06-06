@@ -1,1 +1,5 @@
 node_modules/
+Serveur/target/
+Serveur/.idea/
+Client/.idea/
+node_modules/
