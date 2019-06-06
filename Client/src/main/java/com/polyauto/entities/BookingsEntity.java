@@ -15,7 +15,7 @@ public class BookingsEntity {
     private Date dateDown;
     private int idCar;
     private int idUser;
-    private CarsEntity carsByIdCar;
+    private CarsEntity car;
     private UsersEntity usersByIdUser;
 
     @Id
@@ -97,12 +97,12 @@ public class BookingsEntity {
 
     @ManyToOne
     @JoinColumn(name = "idCar", referencedColumnName = "idCar", nullable = false,insertable = false,updatable = false)
-    public CarsEntity getCarsByIdCar() {
-        return carsByIdCar;
+    public CarsEntity getCar() {
+        return car;
     }
 
-    public void setCarsByIdCar(CarsEntity carsByIdCar) {
-        this.carsByIdCar = carsByIdCar;
+    public void setCar(CarsEntity carsByIdCar) {
+        this.car = carsByIdCar;
     }
 
     @ManyToOne

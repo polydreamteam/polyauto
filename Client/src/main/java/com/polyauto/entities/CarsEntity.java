@@ -93,7 +93,7 @@ public class CarsEntity {
     }
 
     @JsonIgnore
-    @OneToMany(mappedBy = "carsByIdCar")
+    @OneToMany(mappedBy = "car")
     public Collection<BookingsEntity> getBookingsByIdCar() {
         return bookingsByIdCar;
     }
