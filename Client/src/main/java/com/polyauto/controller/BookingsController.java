@@ -122,13 +122,4 @@ public class BookingsController
 
         return response;
     }
-
-    @RequestMapping(method = RequestMethod.GET,value="/test",produces="application/json")
-    public GenericResponse test() throws Exception
-    {
-        TopicPoster.publish();
-
-        GenericResponse response = new GenericResponse();
-        return response;
-    }
 }
