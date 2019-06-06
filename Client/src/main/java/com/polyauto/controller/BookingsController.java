@@ -6,6 +6,7 @@ import com.polyauto.entities.BookingsEntity;
 import com.polyauto.entities.CarsEntity;
 import com.polyauto.exceptions.BadRequestException;
 import com.polyauto.exceptions.UnauthorizedException;
+import com.polyauto.jboss.TopicPoster;
 import com.polyauto.repositories.BookingsEntityRepository;
 import com.polyauto.repositories.CarsEntityRepository;
 import com.polyauto.utilities.GenericResponse;
@@ -119,6 +120,15 @@ public class BookingsController
 
         response.addToContent("booking", booking);
 
+        return response;
+    }
+
+    @RequestMapping(method = RequestMethod.GET,value="/test",produces="application/json")
+    public GenericResponse test() throws Exception
+    {
+        TopicPoster.publish();
+
+        GenericResponse response = new GenericResponse();
         return response;
     }
 }
