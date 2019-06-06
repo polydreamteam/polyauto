@@ -15,7 +15,7 @@ public abstract class EntityService {
 
     public EntityTransaction startTransaction() throws Exception
     {
-        emf = Persistence.createEntityManagerFactory("PolyAutoPer");
+        emf = Persistence.createEntityManagerFactory("PInscription");
         entityManager = emf.createEntityManager();
 
         return entityManager.getTransaction();
