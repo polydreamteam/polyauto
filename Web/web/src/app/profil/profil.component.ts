@@ -4,6 +4,7 @@ import {faPen} from '@fortawesome/free-solid-svg-icons';
 import {faStar} from '@fortawesome/free-regular-svg-icons';
 import {ProfilService} from "../services/profil.service";
 import {Profil} from "../models/profil";
+import {Resa} from "../services/resa";
 
 
 @Component({
@@ -17,6 +18,8 @@ export class ProfilComponent implements OnInit {
   faRegularStar = faStar
   faPen = faPen
   profil: Profil
+  resas: Resa[]
+
 
   constructor(private profilService: ProfilService) { }
 
@@ -28,6 +31,7 @@ export class ProfilComponent implements OnInit {
     this.profilService.getProfil().subscribe(
       data => {
         this.profil = data.content.user
+        this.resas = data.content.bookings
       },
       err => {
         console.log(err)
@@ -39,4 +43,7 @@ export class ProfilComponent implements OnInit {
     //TODO: edit profil function
   }
 
+  editResa(event) {
+    //TODO: edit resa
+  }
 }

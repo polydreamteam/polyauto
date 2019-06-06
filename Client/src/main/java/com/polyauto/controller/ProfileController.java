@@ -31,7 +31,7 @@ public class ProfileController
 
         UsersEntity user = usersRepository.findByIdUser(userId);
 
-        List<BookingsEntity> bookings = new ArrayList<>();//bookingsRepository.findAllByIdUser(userId);
+        List<BookingsEntity> bookings = bookingsRepository.findByIdUser(userId);
 
         GenericResponse response = new GenericResponse();
         response.addToContent("user",user);
