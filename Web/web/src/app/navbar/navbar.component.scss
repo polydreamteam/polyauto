@@ -1,0 +1,26 @@
+@import"../../assets/colors.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  img {
+    width: 200px;
+    cursor: pointer;
+    outline: none;
+  }
+  .menu {
+    color: $brown ;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+    &:hover {
+      color: $orange;
+    }
+    &.current {
+      color: $orange;
+      font-size: 40px;
+    }
+  }
+}

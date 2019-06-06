@@ -1,0 +1,20 @@
+<div class="background" (click)="setVisible()">
+  <div class="modal" (click)="$event.stopPropagation()">
+    <h1>Recherche</h1>
+    <h3>Modèle : </h3>
+    <select class="select" [(ngModel)]="model">
+      <option *ngFor="let item of carService.getModels()" [value]="item">{{carService.modelToString(item)}}</option>
+    </select>
+    <div class="radio-buttons">
+      <div>
+        <input [(ngModel)]="status" id="rented" type="radio" class="custom-control-input" value="0" name="is-rented">
+        <label class="custom-control-label" for="rented">Réservées</label>
+      </div>
+      <div>
+        <input [(ngModel)]="status" id="not-rented" type="radio" class="custom-control-input" value="1" name="is-rented" [checked]="status==1">
+        <label class="custom-control-label" for="not-rented">Disponibles</label>
+      </div>
+    </div>
+    <button class="validate" (click)="research()">Rechercher</button>
+  </div>
+</div>

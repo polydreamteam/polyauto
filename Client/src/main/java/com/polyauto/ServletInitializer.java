@@ -1,4 +1,4 @@
-package com.polyauto.client;
+package com.polyauto;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
