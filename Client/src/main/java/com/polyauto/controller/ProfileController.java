@@ -7,7 +7,6 @@ import com.polyauto.entities.UsersEntity;
 import com.polyauto.exceptions.BadRequestException;
 import com.polyauto.repositories.BookingsEntityRepository;
 import com.polyauto.repositories.UsersEntityRepository;
-import com.polyauto.utilities.DbManager;
 import com.polyauto.utilities.GenericResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

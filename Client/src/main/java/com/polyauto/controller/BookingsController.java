@@ -4,12 +4,10 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import com.polyauto.auth.Authenticator;
 import com.polyauto.entities.BookingsEntity;
 import com.polyauto.entities.CarsEntity;
-import com.polyauto.entities.UsersEntity;
 import com.polyauto.exceptions.BadRequestException;
 import com.polyauto.exceptions.UnauthorizedException;
 import com.polyauto.repositories.BookingsEntityRepository;
 import com.polyauto.repositories.CarsEntityRepository;
-import com.polyauto.utilities.DbManager;
 import com.polyauto.utilities.GenericResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.awt.print.Book;
 import java.sql.Date;
 import java.util.List;
 
