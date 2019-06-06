@@ -20,7 +20,7 @@
       <div class="date-fin">Rendu</div>
     </div>
     <div class="resa-row" *ngFor="let resa of resas">
-      <div class="car">Modele</div>
+      <div class="car">{{resa}}</div>
       <div class="date-debut">{{resa.dateUp | date:'dd/MM/yyyy'}}</div>
       <button *ngIf="resa.dateDown == null" (click)="editResa(resa)">Rendre</button>
       <div class="date-fin" *ngIf="resa.dateDown != null" (click)="editResa(resa)">{{resa.dateDown | date:'dd/MM/yyyy'}}</div>

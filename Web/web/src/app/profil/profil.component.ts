@@ -32,6 +32,7 @@ export class ProfilComponent implements OnInit {
       data => {
         this.profil = data.content.user
         this.resas = data.content.bookings
+        console.log(this.resas)
       },
       err => {
         console.log(err)
