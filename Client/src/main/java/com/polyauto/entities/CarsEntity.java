@@ -1,6 +1,9 @@
 package com.polyauto.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -19,6 +22,7 @@ public class CarsEntity {
     private double lat;
     private double lon;
     private byte status;
+    private Collection<BookingsEntity> bookingsByIdCar;
 
     @Id
     @Column(name = "idCar")
@@ -86,5 +90,15 @@ public class CarsEntity {
     public int hashCode() {
 
         return Objects.hash(idCar, model, lat, lon, status);
+    }
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "carsByIdCar")
+    public Collection<BookingsEntity> getBookingsByIdCar() {
+        return bookingsByIdCar;
+    }
+
+    public void setBookingsByIdCar(Collection<BookingsEntity> bookingsByIdCar) {
+        this.bookingsByIdCar = bookingsByIdCar;
     }
 }

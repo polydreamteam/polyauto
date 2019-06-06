@@ -15,6 +15,8 @@ public class BookingsEntity {
     private Date dateDown;
     private int idCar;
     private int idUser;
+    private CarsEntity carsByIdCar;
+    private UsersEntity usersByIdUser;
 
     @Id
     @Column(name = "idBooking")
@@ -91,5 +93,25 @@ public class BookingsEntity {
 
     public void setIdUser(int idUser) {
         this.idUser = idUser;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "idCar", referencedColumnName = "idCar", nullable = false,insertable = false,updatable = false)
+    public CarsEntity getCarsByIdCar() {
+        return carsByIdCar;
+    }
+
+    public void setCarsByIdCar(CarsEntity carsByIdCar) {
+        this.carsByIdCar = carsByIdCar;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "idUser", referencedColumnName = "idUser", nullable = false,insertable = false,updatable = false)
+    public UsersEntity getUsersByIdUser() {
+        return usersByIdUser;
+    }
+
+    public void setUsersByIdUser(UsersEntity usersByIdUser) {
+        this.usersByIdUser = usersByIdUser;
     }
 }

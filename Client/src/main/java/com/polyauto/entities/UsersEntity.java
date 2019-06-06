@@ -3,6 +3,7 @@ package com.polyauto.entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -14,6 +15,8 @@ public class UsersEntity {
     private String firstname;
     private String lastname;
     private int note;
+    private byte admin;
+    private Collection<BookingsEntity> bookingsByIdUser;
 
     @Id
     @Column(name = "idUser")
@@ -93,5 +96,25 @@ public class UsersEntity {
     public int hashCode() {
 
         return Objects.hash(idUser, login, password, firstname, lastname, note);
+    }
+
+    @Basic
+    @Column(name = "admin")
+    public byte getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(byte admin) {
+        this.admin = admin;
+    }
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "usersByIdUser")
+    public Collection<BookingsEntity> getBookingsByIdUser() {
+        return bookingsByIdUser;
+    }
+
+    public void setBookingsByIdUser(Collection<BookingsEntity> bookingsByIdUser) {
+        this.bookingsByIdUser = bookingsByIdUser;
     }
 }

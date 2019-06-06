@@ -4,6 +4,7 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import com.polyauto.auth.Authenticator;
 import com.polyauto.entities.BookingsEntity;
 import com.polyauto.entities.UsersEntity;
+import com.polyauto.exceptions.BadRequestException;
 import com.polyauto.repositories.BookingsEntityRepository;
 import com.polyauto.repositories.UsersEntityRepository;
 import com.polyauto.utilities.DbManager;
@@ -31,7 +32,7 @@ public class ProfileController
 
         UsersEntity user = usersRepository.findByIdUser(userId);
 
-        List<BookingsEntity> bookings = new ArrayList<>();//bookingsRepository.findAllByIdUser(userId);
+        List<BookingsEntity> bookings = bookingsRepository.findByIdUser(userId);
 
         GenericResponse response = new GenericResponse();
         response.addToContent("user",user);
@@ -54,13 +55,7 @@ public class ProfileController
     }
 
     @RequestMapping(method = RequestMethod.POST,value="/modifyProfileInfo",produces="application/json")
-    public GenericResponse modifyProfileInfo(@RequestParam String token,
-                                             String login,
-                                             String password,
-                                             String firstname,
-                                             String lastname,
-                                             Integer note
-                                            ) throws Exception
+    public GenericResponse modifyProfileInfo(@RequestParam String token,String login, String password, String firstname, String lastname, Integer note) throws Exception
     {
         //Verify token
         DecodedJWT jwt_decoded = Authenticator.verifyAndDecodeToken(token);
@@ -71,22 +66,35 @@ public class ProfileController
         //Find user by id
         UsersEntity user = usersRepository.findByIdUser(userId);
 
+        if(user == null)
+        {
+            throw new BadRequestException();
+        }
+
         //Update user with optional parameters
         if (login != null)
+        {
             user.setLogin(login);
+        }
         if (password != null)
+        {
             user.setPassword(password);
+        }
         if (firstname != null)
+        {
             user.setFirstname(firstname);
+        }
         if (lastname != null)
+        {
             user.setLastname(lastname);
+        }
         if (note != null)
+        {
             user.setNote(note);
+        }
 
-        //TODO : Faire marcher la sauvegarde en DB
-        DbManager.updateProfile(user);
+        //TODO : Remonter vers JBoss
 
-        //send back the updated user
         GenericResponse response = new GenericResponse();
         response.addToContent("user",user);
 

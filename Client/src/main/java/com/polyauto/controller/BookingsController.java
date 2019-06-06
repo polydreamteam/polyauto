@@ -57,8 +57,6 @@ public class BookingsController
             throw new UnauthorizedException();
         }
 
-        //TODO Mettre le lien API JBOSS
-
         CarsEntity car = carsRepository.isCarAvalaible(Integer.valueOf(idCar));
 
         if(car == null)
@@ -69,27 +67,26 @@ public class BookingsController
         BookingsEntity newBooking = new BookingsEntity();
         newBooking.setIdUser(Integer.valueOf(userId));
         newBooking.setIdCar(Integer.valueOf(idCar));
-        newBooking.setStatus(Byte.parseByte("1")); //TODO : Also update car status ?
 
-        //TODO : WARNING - Un book ouvert a un status de 1, mais les voitures ont un status de 1 de base dans la bd, normale?
+        newBooking.setStatus(Byte.parseByte("1"));
 
         java.util.Date utilDate = new java.util.Date();
         newBooking.setDateUp(new Date(utilDate.getTime()));
 
-        //TODO : Faire marcher la sauvegarde en DB
+        //TODO Mettre le lien API JBOSS
+        //TODO : Statut voiture
+
         //DbManager.saveBooking(newBooking);
 
         GenericResponse response = new GenericResponse();
 
-        //Used to check result while waiting for DB updates to work
         response.addToContent("booking", newBooking);
 
         return response;
     }
 
     @RequestMapping(method = RequestMethod.POST, value="/closeBooking",produces="application/json")
-    public GenericResponse closeBooking(@RequestParam String token,
-                                        @RequestParam String bookingId) throws Exception
+    public GenericResponse closeBooking(@RequestParam String token, @RequestParam String bookingId) throws Exception
     {
         //Identify and get user id
         DecodedJWT jwt_decoded = Authenticator.verifyAndDecodeToken(token);
@@ -99,35 +96,32 @@ public class BookingsController
         BookingsEntity booking = bookingsRepository.findByIdBooking(Integer.valueOf(bookingId));
 
         //Error if not existent
-        if (booking == null) {
-            //TODO : Vrai message erreur
+        if (booking == null)
+        {
             throw new BadRequestException();
         }
 
         List<BookingsEntity> userOpenedBookings = bookingsRepository.findUsersOpenedBooking(userId);
 
         //Error if not opened by user
-        if (!userOpenedBookings.contains(booking)) {
-            //TODO : Vrai message erreur
+        if (!userOpenedBookings.contains(booking))
+        {
             throw new BadRequestException();
         }
 
         //Close the booking
-        booking.setStatus(Byte.parseByte("0")); //TODO : Also update car status ?
+        booking.setStatus(Byte.parseByte("0"));
 
         java.util.Date utilDate = new java.util.Date();
         booking.setDateDown(new Date(utilDate.getTime()));
 
-        //Save changes
-        //TODO : Faire marcher la sauvegarde en DB
-        //DbManager.updateBooking(booking);
+        //TODO Mettre le lien API JBOSS
+        //TODO : Statut voiture
 
         GenericResponse response = new GenericResponse();
 
-        //Used to check result while waiting for DB updates to work
         response.addToContent("booking", booking);
 
         return response;
-
     }
 }
