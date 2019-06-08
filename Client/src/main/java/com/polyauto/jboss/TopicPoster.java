@@ -1,12 +1,8 @@
 package com.polyauto.jboss;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import javax.jms.*;
-import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import java.io.Serializable;
@@ -27,7 +23,7 @@ public class TopicPoster
 
             tcf = (TopicConnectionFactory) tmp;
             conn = tcf.createTopicConnection("jmsuser", "jmsepul98!");
-            topic = (Topic) iniCtx.lookup("java:jboss/exported/topic/PolyA  utoTopic");
+            topic = (Topic) iniCtx.lookup("java:jboss/exported/topic/PolyAutoTopic");
             // Send the specified number of messages
         } catch (JMSException e) {
             throw e;
