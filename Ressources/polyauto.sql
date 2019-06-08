@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  Dim 12 mai 2019 à 12:35
+-- Généré le :  sam. 08 juin 2019 à 13:01
 -- Version du serveur :  10.1.37-MariaDB
 -- Version de PHP :  7.3.1
 
@@ -23,6 +23,7 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
+CREATE USER 'polyauto'@'localhost' IDENTIFIED VIA mysql_native_password USING '***';GRANT ALL PRIVILEGES ON *.* TO 'polyauto'@'localhost' REQUIRE NONE WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
 
 --
 -- Structure de la table `bookings`
@@ -36,6 +37,18 @@ CREATE TABLE `bookings` (
   `dateUp` date NOT NULL,
   `dateDown` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `bookings`
+--
+
+INSERT INTO `bookings` (`idBooking`, `idCar`, `idUser`, `status`, `dateUp`, `dateDown`) VALUES
+(1, 1, 1, 1, '2019-06-14', '0000-00-00'),
+(2, 4, 1, 1, '2019-05-28', '0000-00-00'),
+(3, 3, 2, 0, '2019-05-28', '2019-05-30'),
+(4, 6, 2, 0, '2019-05-28', '2019-05-30'),
+(5, 1, 3, 0, '2019-05-28', '2019-05-30'),
+(6, 2, 3, 1, '2019-05-28', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -56,7 +69,7 @@ CREATE TABLE `cars` (
 --
 
 INSERT INTO `cars` (`idCar`, `model`, `lat`, `lon`, `status`) VALUES
-(1, 1, 45.75589542, 4.87421094, 1),
+(1, 1, 45.75589542, 4.87421094, 0),
 (2, 2, 45.76209157, 4.77712804, 1),
 (3, 1, 45.73965628, 4.8037043, 1),
 (4, 1, 45.76735786, 4.82275812, 1),
@@ -119,15 +132,19 @@ CREATE TABLE `users` (
   `password` varchar(64) NOT NULL,
   `firstname` varchar(32) NOT NULL,
   `lastname` varchar(32) NOT NULL,
-  `note` int(11) NOT NULL
+  `note` int(11) NOT NULL,
+  `admin` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`idUser`, `login`, `password`, `firstname`, `lastname`, `note`) VALUES
-(1, 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'ADMIN', 'DEV', 5);
+INSERT INTO `users` (`idUser`, `login`, `password`, `firstname`, `lastname`, `note`, `admin`) VALUES
+(1, 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'ADMIN', 'DEV', 5, 1),
+(2, 'tommy', '044f4b3501cd8e8131d40c057893f4fdff66bf4032ecae159e0c892a28cf6c8e', 'Tom', 'Basil', 3, 0),
+(3, 'vial', 'b107fb284c075897508e7f8dff929ac89b3f1067bdce0f25687ab657e5ee7d0d', 'Christian', 'Vial', 7, 0),
+(4, 'Elie', '281dc093e8ea1bd931774d7a28dccb50e3a307756b7ff07bad897f10a56bfde0', 'Elie', 'Ensuque', 20, 0);
 
 --
 -- Index pour les tables déchargées
@@ -161,7 +178,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `idBooking` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idBooking` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `cars`
@@ -173,7 +190,7 @@ ALTER TABLE `cars`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Contraintes pour les tables déchargées
@@ -190,4 +207,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-CREATE USER 'polyauto'@'localhost' IDENTIFIED VIA mysql_native_password USING '***';GRANT ALL PRIVILEGES ON *.* TO 'polyauto'@'localhost' REQUIRE NONE WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
