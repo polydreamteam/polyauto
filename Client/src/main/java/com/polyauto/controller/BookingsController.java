@@ -72,7 +72,6 @@ public class BookingsController
         newBooking.setDateUp(new Date(utilDate.getTime()));
 
         //TODO Mettre le lien API JBOSS
-        //TODO : Statut voiture
 
         //DbManager.saveBooking(newBooking);
 
@@ -114,7 +113,6 @@ public class BookingsController
         booking.setDateDown(new Date(utilDate.getTime()));
 
         //TODO Mettre le lien API JBOSS
-        //TODO : Statut voiture
 
         GenericResponse response = new GenericResponse();
 

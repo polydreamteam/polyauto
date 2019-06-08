@@ -25,9 +25,6 @@ import java.util.Date;
 public class AuthenticationController
 {
     @Autowired
-    private Environment env;
-
-    @Autowired
     private UsersEntityRepository usersRepository;
 
     @CrossOrigin(origins = "http://localhost:4200")
@@ -52,22 +49,11 @@ public class AuthenticationController
         GenericResponse response = new GenericResponse();
 
         try {
-            Algorithm algorithm = Algorithm.HMAC256(env.getProperty("polyauto.secretKey"));
 
-            String nonce = new RandomString(64).nextString();
-
-            String verification = Authenticator.generateVerificationString(login,String.valueOf(user.getIdUser()),nonce);
-
-            String token = JWT.create()
-                    .withClaim("user",login)
-                    .withClaim("userId",String.valueOf(user.getIdUser()))
-                    .withClaim("nonce",nonce)
-                    .withClaim("verification",verification)
-                    .withIssuer("polyauto")
-                    .withIssuedAt(new Date())
-                    .sign(algorithm);
+            String token = Authenticator.buildToken(user);
 
             response.addToContent("token",token);
+            response.addToContent("isAdmin",String.valueOf(user.getAdmin()));
             return response;
 
         } catch (JWTCreationException exception){
