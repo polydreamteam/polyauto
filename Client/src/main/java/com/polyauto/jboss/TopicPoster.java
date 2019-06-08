@@ -18,27 +18,16 @@ public class TopicPoster
     private static TopicConnection conn;
     private static Topic topic;
 
-    @Autowired
-    private Environment env0;
-
-    private static Environment env;
-
-    @PostConstruct
-    private void initAuthenticator()
-    {
-        env = env0;
-    }
-
     public static void init() throws JMSException, NamingException {
 
         try {
             InitialContext iniCtx = new InitialContext();
 
-            Object tmp = iniCtx.lookup(env.getProperty("polyauto.jboss.connectionFactory"));
+            Object tmp = iniCtx.lookup("ConnectionFactory");
 
             tcf = (TopicConnectionFactory) tmp;
-            conn = tcf.createTopicConnection(env.getProperty("polyauto.jboss.jmsuser"), env.getProperty("polyauto.jboss.jmspassword"));
-            topic = (Topic) iniCtx.lookup(env.getProperty("polyauto.jboss.topic"));
+            conn = tcf.createTopicConnection("jmsuser", "jmsepul98!");
+            topic = (Topic) iniCtx.lookup("java:jboss/exported/topic/PolyA  utoTopic");
             // Send the specified number of messages
         } catch (JMSException e) {
             throw e;
