@@ -29,7 +29,7 @@ public class BookingsController
     @Autowired
     private CarsEntityRepository carsRepository;
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.GET,value="/getLastOpenedBooking",produces="application/json")
     public GenericResponse getLastOpenedBooking(@RequestParam String token) throws RuntimeException
     {
@@ -46,7 +46,7 @@ public class BookingsController
         return response;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.POST,value="/bookCar",produces="application/json")
     public GenericResponse bookCar(@RequestParam String token,@RequestParam String userId,@RequestParam String idCar) throws Exception
     {
@@ -95,7 +95,7 @@ public class BookingsController
         return response;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.POST, value="/closeBooking",produces="application/json")
     public GenericResponse closeBooking(@RequestParam String token, @RequestParam String bookingId) throws Exception
     {

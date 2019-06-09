@@ -22,7 +22,7 @@ public class ProfileController
     @Autowired
     private BookingsEntityRepository bookingsRepository;
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.GET,value="/getProfileComplete",produces="application/json")
     public GenericResponse getProfileComplete(@RequestParam String token) throws RuntimeException
     {
@@ -39,7 +39,7 @@ public class ProfileController
         return response;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.GET,value="/getProfileSimple",produces="application/json")
     public GenericResponse getProfileSimple(@RequestParam String token) throws RuntimeException
     {
@@ -54,7 +54,7 @@ public class ProfileController
         return response;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.POST,value="/modifyProfileInfo",produces="application/json")
     public GenericResponse modifyProfileInfo(@RequestParam String token,String login, String password, String firstname, String lastname, Integer note) throws Exception
     {

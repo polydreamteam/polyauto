@@ -7,56 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21895b0d-c90c-417c-b318-4c7bc1158a6a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../Client/.idea/libraries/Maven__javax_jms_jms_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PolyAutoServeur/PolyAutoServeur.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/Client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/Client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/artifacts/Client_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/artifacts/Client_war.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/artifacts/Client_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/artifacts/Client_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/libraries/jboss_cli_client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/libraries/jboss_cli_client.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/libraries/lib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/main/java/com/polyauto/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/com/polyauto/controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/main/java/com/polyauto/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/com/polyauto/controller/AuthenticationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/main/java/com/polyauto/controller/BookingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/com/polyauto/controller/BookingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/com/polyauto/controller/CarsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/com/polyauto/controller/CarsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Client/src/main/java/com/polyauto/controller/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/com/polyauto/controller/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PolyAutoServeur.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PolyAutoServeur.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/.idea/Web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/.idea/Web.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/car-info/car-info.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/car-info/car-info.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/car-info/car-info.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/car-info/car-info.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/login-page/login-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/login-page/login-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/models/car.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/models/car.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/models/profil.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/models/profil.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/navbar/navbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/navbar/navbar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/navbar/navbar.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/navbar/navbar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/profil/profil.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/profil/profil.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/profil/profil.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/profil/profil.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/profil/profil.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/profil/profil.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/research-modal/research-modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/research-modal/research-modal.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/research-modal/research-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/research-modal/research-modal.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/services/car.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/services/car.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/services/connexion.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/services/connexion.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/services/profil.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/services/profil.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/services/resa.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/models/resa.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Web/web/src/app/services/resa.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Web/web/src/app/models/resa.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -88,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PolyAutoServeur/PolyAutoServeur.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+            <state relative-caret-position="170">
+              <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -129,8 +86,8 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
     <option name="width" value="977" />
     <option name="height" value="1050" />
   </component>
@@ -206,15 +163,15 @@
       <workItem from="1555314836987" duration="49000" />
       <workItem from="1560071483038" duration="1746000" />
       <workItem from="1560076869197" duration="279000" />
-      <workItem from="1560083120282" duration="599000" />
+      <workItem from="1560083120282" duration="1572000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3623000" />
+    <option name="totallyTimeSpent" value="4596000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26040268" />
@@ -291,8 +248,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PolyAutoServeur/PolyAutoServeur.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+        <state relative-caret-position="170">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
         </state>
       </provider>
     </entry>

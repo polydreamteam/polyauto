@@ -17,7 +17,7 @@ public class CarsController
     @Autowired
     private CarsEntityRepository carsRepository;
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.GET,value="/getAvailableCars",produces="application/json")
     public GenericResponse getAvailableCars()
     {
@@ -28,7 +28,7 @@ public class CarsController
         return response;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.GET,value="/getNotAvailableCars",produces="application/json")
     public GenericResponse getNotAvailableCars()
     {
@@ -39,7 +39,7 @@ public class CarsController
         return response;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.GET,value="/getWithStatusAndModel",produces="application/json")
     public GenericResponse getWithStatusAndModel(String status, String model)
     {

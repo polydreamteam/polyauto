@@ -29,7 +29,7 @@ public class AdminController
     @Autowired
     private BookingsEntityRepository bookingsRepository;
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.GET,value="/isAdmin",produces="application/json")
     public GenericResponse isAdmin(@RequestParam String token) throws RuntimeException
     {
@@ -41,7 +41,7 @@ public class AdminController
         return response;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.GET,value="/admin")
     public ModelAndView adminLobby(HttpServletRequest request,@RequestParam String token) throws RuntimeException
     {
@@ -62,7 +62,7 @@ public class AdminController
         return new ModelAndView("admin/index");
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.GET,value="/admin/cars")
     public ModelAndView carsList(HttpServletRequest request,@RequestParam String token) throws RuntimeException
     {
@@ -81,7 +81,7 @@ public class AdminController
         return new ModelAndView("admin/cars");
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.GET,value="/admin/users")
     public ModelAndView usersList(HttpServletRequest request,@RequestParam String token) throws RuntimeException
     {
@@ -100,7 +100,7 @@ public class AdminController
         return new ModelAndView("admin/users");
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.GET,value="/admin/bookings")
     public ModelAndView bookingsList(HttpServletRequest request,@RequestParam String token) throws RuntimeException
     {

@@ -27,7 +27,7 @@ public class AuthenticationController
     @Autowired
     private UsersEntityRepository usersRepository;
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.POST,value="/login",produces="application/json")
     public GenericResponse login(@RequestParam String login, @RequestParam String password) throws RuntimeException
     {
