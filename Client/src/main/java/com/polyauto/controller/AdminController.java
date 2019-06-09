@@ -62,6 +62,7 @@ public class AdminController
         return new ModelAndView("admin/index");
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(method = RequestMethod.GET,value="/admin/cars")
     public ModelAndView carsList(HttpServletRequest request,@RequestParam String token) throws RuntimeException
     {
@@ -80,6 +81,7 @@ public class AdminController
         return new ModelAndView("admin/cars");
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(method = RequestMethod.GET,value="/admin/users")
     public ModelAndView usersList(HttpServletRequest request,@RequestParam String token) throws RuntimeException
     {
@@ -98,6 +100,7 @@ public class AdminController
         return new ModelAndView("admin/users");
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(method = RequestMethod.GET,value="/admin/bookings")
     public ModelAndView bookingsList(HttpServletRequest request,@RequestParam String token) throws RuntimeException
     {

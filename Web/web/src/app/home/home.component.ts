@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 import {faUser} from '@fortawesome/free-solid-svg-icons';
-import {ConnexionService} from "../services/connexion.service";
-import {CarService} from "../services/car.service";
+import {ConnexionService} from '../services/connexion.service';
+import {CarService} from '../services/car.service';
 
 
 
@@ -13,18 +13,18 @@ import {CarService} from "../services/car.service";
 })
 export class HomeComponent implements OnInit {
 
-  connected: boolean = false;
+  connected = false;
   faUser = faUser;
   lat: number[] = [];
   long: number[] = [];
   cars: any = [];
-  zoom: number = 15;
-  displayResearchModal: boolean = false;
+  zoom = 15;
+  displayResearchModal = false;
 
   constructor(private router: Router, private connexionService: ConnexionService, private carService: CarService) { }
 
   ngOnInit() {
-    this.getCars(1, null);
+    this.getCars('1', null);
     this.setConnected();
   }
 
@@ -34,21 +34,21 @@ export class HomeComponent implements OnInit {
   }
 
   goToLogin() {
-    this.router.navigateByUrl("/login")
+    this.router.navigateByUrl('/login');
   }
 
 
-  getCars(status: number, model: number) {
+  getCars(status: string, model: string) {
     this.carService.filterCars(status, model).subscribe(
       data => {
-        this.cars = data.content.cars
-        this.lat = data.content.cars.map(item => item.lat)
-        this.long = data.content.cars.map(item => item.lon)
+        this.cars = data.content.cars;
+        this.lat = data.content.cars.map(item => item.lat);
+        this.long = data.content.cars.map(item => item.lon);
       },
       err => {
-        console.log(err)
+        console.log(err);
       }
-    )
+    );
   }
 
   toggleModal() {

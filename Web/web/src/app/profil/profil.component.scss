@@ -1,17 +1,27 @@
 @import "../../assets/colors";
 
 .profil-page {
-
   display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100vw;
+  @media screen and (max-width: 950px) {
+    justify-content: center;
+  }
 
   .profil {
     background-image: url("../../assets/pictures/driver.svg");
-    height: 100vh;
+    height: 515px;
     background-repeat: no-repeat;
     background-position-x: -230px;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    .wrapper {
+      padding: 5px;
+      input {
+        width: 200px;
+      }
+    }
 
     .title{
       margin-left: 120px;
@@ -30,12 +40,16 @@
       margin-left: 150px;
       font-size: 25px;
       margin-bottom: 20px;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
 
     .last-name {
       margin-left: 180px;
       font-size: 25px;
       margin-bottom: 20px;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
 
     .stars {
@@ -50,7 +64,18 @@
   }
 
   .resa {
-    width: 300px;
+    background-image: url("../../assets/pictures/key.svg");
+    background-repeat: no-repeat;
+    background-position-x: -250px;
+    height: 515px;
+
+    .wrapper {
+      padding: 140px 10px 0 35px;
+      h2 {
+        margin-left: 110px;
+      }
+    }
+
     .resa-row {
       display: flex;
       width: 100%;
@@ -60,6 +85,16 @@
         font-weight: bold;
       }
     }
+  }
+
+  .profil, .resa {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    margin: 10px;
+    width: 450px;
+
   }
 }
 

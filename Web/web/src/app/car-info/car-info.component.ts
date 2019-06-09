@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Car} from "../models/car.model";
-import {CarService} from "../services/car.service";
+import {Car} from '../models/car.model';
+import {CarService} from '../services/car.service';
+import {BookingService} from '../services/booking.service';
 
 @Component({
   selector: 'app-car-info',
@@ -9,12 +10,17 @@ import {CarService} from "../services/car.service";
 })
 export class CarInfoComponent implements OnInit {
 
-@Input() car : Car;
+@Input() car: Car;
 
 
-  constructor(public carService: CarService) { }
+  constructor(public carService: CarService, private bookingService: BookingService) { }
 
   ngOnInit() {
+  }
+
+
+  bookCar() {
+    this.bookingService.postBooking(this.car.idCar);
   }
 
 }

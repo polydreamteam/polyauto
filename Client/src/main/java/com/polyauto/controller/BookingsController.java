@@ -13,10 +13,7 @@ import com.polyauto.repositories.BookingsEntityRepository;
 import com.polyauto.repositories.CarsEntityRepository;
 import com.polyauto.utilities.GenericResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.jms.ObjectMessage;
 import java.awt.print.Book;
@@ -32,6 +29,7 @@ public class BookingsController
     @Autowired
     private CarsEntityRepository carsRepository;
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(method = RequestMethod.GET,value="/getLastOpenedBooking",produces="application/json")
     public GenericResponse getLastOpenedBooking(@RequestParam String token) throws RuntimeException
     {
@@ -48,6 +46,7 @@ public class BookingsController
         return response;
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(method = RequestMethod.POST,value="/bookCar",produces="application/json")
     public GenericResponse bookCar(@RequestParam String token,@RequestParam String userId,@RequestParam String idCar) throws Exception
     {
@@ -96,6 +95,7 @@ public class BookingsController
         return response;
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(method = RequestMethod.POST, value="/closeBooking",produces="application/json")
     public GenericResponse closeBooking(@RequestParam String token, @RequestParam String bookingId) throws Exception
     {

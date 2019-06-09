@@ -1,29 +1,36 @@
 <div class="profil-page">
-  <div class="profil">
-    <div class="title">
-      <h1>Mon profil</h1>
-      <fa-icon [icon]="faPen" (click)="editProfile()"></fa-icon>
-    </div>
-    <div class="name">{{profil.firstname}}</div>
-    <div class="last-name">{{profil.lastname}}</div>
-    <div class="stars">
-      <div class="yellow-star" *ngFor="let dummy of ' '.repeat(profil.note).split('')"><fa-icon [icon]="faSolidStar"></fa-icon></div>
-      <div class=" no-star" *ngFor="let dummy of ' '.repeat(5-profil.note).split('')"><fa-icon [icon]="faRegularStar"></fa-icon></div>
+  <div *ngIf="profil" class="profil">
+    <div class="wrapper">
+      <div class="title">
+        <h1>Mon profil</h1>
+        <fa-icon *ngIf="!isEditing" [icon]="faPen" (click)="editProfile()"></fa-icon>
+        <fa-icon *ngIf="isEditing" [icon]="faCheck" (click)="saveProfil()"></fa-icon>
+      </div>
+      <div *ngIf="!isEditing" class="name">{{profil.firstname}}</div>
+      <div *ngIf="!isEditing" class="last-name">{{profil.lastname}}</div>
+      <input *ngIf="isEditing" [(ngModel)]="profil.firstname" class="name" type="text" />
+      <input *ngIf="isEditing" [(ngModel)]="profil.lastname" class="last-name" type="text" />
+      <div class="stars">
+        <div class="yellow-star" *ngFor="let dummy of ' '.repeat(profil.note).split('')"><fa-icon [icon]="faSolidStar"></fa-icon></div>
+        <div class=" no-star" *ngFor="let dummy of ' '.repeat(5-profil.note).split('')"><fa-icon [icon]="faRegularStar"></fa-icon></div>
+      </div>
     </div>
   </div>
 
   <div class="resa">
-    <h2>Mes Réservations</h2>
-    <div class="resa-row header">
-      <div class="car">Modèle</div>
-      <div class="date-debut">Location</div>
-      <div class="date-fin">Rendu</div>
-    </div>
-    <div class="resa-row" *ngFor="let resa of resas">
-      <div class="car">{{resa}}</div>
-      <div class="date-debut">{{resa.dateUp | date:'dd/MM/yyyy'}}</div>
-      <button *ngIf="resa.dateDown == null" (click)="editResa(resa)">Rendre</button>
-      <div class="date-fin" *ngIf="resa.dateDown != null" (click)="editResa(resa)">{{resa.dateDown | date:'dd/MM/yyyy'}}</div>
+    <div class="wrapper">
+      <h2>Mes Réservations</h2>
+      <div class="resa-row header">
+        <div class="car">Modèle</div>
+        <div class="date-debut">Location</div>
+        <div class="date-fin">Rendu</div>
+      </div>
+      <div class="resa-row" *ngFor="let resa of resas">
+        <div class="car">{{carService.modelToString(resa.car.model)}}</div>
+        <div class="date-debut">{{resa.dateUp | date:'dd/MM/yyyy'}}</div>
+        <button *ngIf="resa.dateDown == null" (click)="editResa(resa)">Rendre</button>
+        <div class="date-fin" *ngIf="resa.dateDown != null" (click)="editResa(resa)">{{resa.dateDown | date:'dd/MM/yyyy'}}</div>
+      </div>
     </div>
   </div>
 </div>

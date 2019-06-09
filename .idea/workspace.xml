@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a86af9f-4389-4192-9815-9ebf8c665fbe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Client/client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/.idea/artifacts/Client_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/.idea/artifacts/Client_war_exploded.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/.idea/libraries/Maven__javax_jms_jms_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Serveur/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Serveur/PolyAutoServeur/PolyAutoServeur.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/.idea/Client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/.idea/Client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/.idea/artifacts/Client_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/.idea/artifacts/Client_war.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/.idea/artifacts/Client_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/.idea/artifacts/Client_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/.idea/libraries/jboss_cli_client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/.idea/libraries/jboss_cli_client.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/.idea/libraries/lib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/web/src/app/profil/profil.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Web/web/src/app/profil/profil.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/web/src/app/profil/profil.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Web/web/src/app/profil/profil.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serveur/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Serveur/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serveur/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Serveur/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serveur/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Serveur/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serveur/PolyAutoServeur.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Serveur/PolyAutoServeur.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,8 +52,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web/web/src/app/profil/profil.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+            <state>
+              <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,7 +85,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/web/src/app/profil/profil.component.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="408">
               <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
             </state>
           </provider>
@@ -82,7 +94,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/web/src/app/services/car.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="306">
               <caret line="18" column="97" selection-start-line="17" selection-start-column="5" selection-end-line="18" selection-end-column="97" />
               <folding>
                 <element signature="e#0#60#0" expanded="true" />
@@ -147,17 +159,15 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="63" />
-    <option name="y" value="78" />
-    <option name="width" value="1929" />
-    <option name="height" value="1048" />
+    <option name="x" value="-9" />
+    <option name="width" value="815" />
+    <option name="height" value="869" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -169,6 +179,11 @@
             <path>
               <item name="polyauto" type="b2602c69:ProjectViewProjectNode" />
               <item name="polyauto" type="462c0819:PsiDirectoryNode" />
+              <item name="Serveur" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="polyauto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="polyauto" type="462c0819:PsiDirectoryNode" />
               <item name="Web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -191,24 +206,6 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="polyauto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="polyauto" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="polyauto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="polyauto" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="polyauto" type="b2602c69:ProjectViewProjectNode" />
@@ -232,6 +229,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -239,10 +237,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ISI 3/isi3-tp-webapp-2019-cluniat-baccuet-1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="ts.external.directory.path" value="C:\Users\Philippine CLUNIAT\Desktop\CLUNIAT\4A INFO\InfoRepartie\polyauto\Web\web\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\Philippine CLUNIAT\AppData\Local\JetBrains\IntelliJ IDEA 2019.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -302,11 +300,13 @@
       <workItem from="1558444989730" duration="3677000" />
       <workItem from="1559649891943" duration="20286000" />
       <workItem from="1559803237379" duration="3944000" />
+      <workItem from="1560077023618" duration="135000" />
+      <workItem from="1560079631799" duration="58000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56163000" />
+    <option name="totallyTimeSpent" value="56356000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -319,8 +319,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23825504" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24496645" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -613,23 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/web/src/app/home/home.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="23" selection-start-line="2" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/web/src/app/services/car.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="97" selection-start-line="17" selection-start-column="5" selection-end-line="18" selection-end-column="97" />
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/web/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -644,17 +628,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/web/src/app/profil/profil.component.scss">
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/home/home.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/web/src/app/models/profil.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -675,10 +652,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/models/profil.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/profil/profil.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/services/car.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="97" selection-start-line="17" selection-start-column="5" selection-end-line="18" selection-end-column="97" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Web/web/src/app/profil/profil.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+        <state>
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

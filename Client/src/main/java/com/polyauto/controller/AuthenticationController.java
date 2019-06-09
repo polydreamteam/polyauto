@@ -54,6 +54,7 @@ public class AuthenticationController
 
             response.addToContent("token",token);
             response.addToContent("isAdmin",String.valueOf(user.getAdmin()));
+            response.addToContent("userId",String.valueOf(user.getIdUser()));
             return response;
 
         } catch (JWTCreationException exception){
