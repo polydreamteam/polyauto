@@ -1,4 +1,4 @@
-package dto;
+package com.polyauto.dto;
 
 import java.io.Serializable;
 

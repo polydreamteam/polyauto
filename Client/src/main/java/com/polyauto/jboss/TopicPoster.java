@@ -1,5 +1,10 @@
 package com.polyauto.jboss;
 
+import com.polyauto.dto.ObjectMessageSend;
+import com.polyauto.entities.Bookings;
+import com.polyauto.entities.BookingsEntity;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
 import javax.jms.*;
@@ -34,7 +39,7 @@ public class TopicPoster
         }
     }
 
-    public static void publish(Serializable object) throws Exception
+    public static void publish(ObjectMessageSend object) throws Exception
     {
         try {
             // Send the specified number of messages

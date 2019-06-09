@@ -3,14 +3,14 @@
 
     <persistence-unit name="PolyAutoPer">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>metier.BookingsEntity</class>
-        <class>metier.CarsEntity</class>
-        <class>metier.UsersEntity</class>
+        <class>com.polyauto.entities.BookingsEntity</class>
+        <class>com.polyauto.entities.CarsEntity</class>
+        <class>com.polyauto.entities.UsersEntity</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/polyauto"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
-            <property name="hibernate.connection.username" value=""/>
-            <property name="hibernate.connection.password" value=""/>
+            <property name="hibernate.connection.username" value="admin"/>
+            <property name="hibernate.connection.password" value="admin"/>
             <property name="hibernate.archive.autodetection" value="class"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>

@@ -1,7 +1,7 @@
 package dao;
 
+import com.polyauto.entities.Bookings;
 import meserreurs.MonException;
-import metier.*;
 
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.EntityTransaction;
@@ -17,9 +17,11 @@ public class Service extends EntityService {
             entityManager.close();
         } catch (
         EntityNotFoundException h) {
+            h.printStackTrace();
             throw (new MonException("Erreur d'insertion", h.getMessage()));
         } catch (Exception e) {
             System.out.println("Erreur :"+ e.getMessage());
+            e.printStackTrace();
             throw(new MonException("Erreur d'insertion", e.getMessage()));
         }
     }

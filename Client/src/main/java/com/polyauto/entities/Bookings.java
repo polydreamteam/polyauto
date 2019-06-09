@@ -1,4 +1,4 @@
-package metier;
+package com.polyauto.entities;
 
 import java.io.Serializable;
 import java.sql.Date;
@@ -8,6 +8,9 @@ public class Bookings implements Serializable {
     private byte status;
     private Date dateDown;
     private Date dateUp;
+    private int idCar;
+    private int idUser;
+
 
     public int getIdBooking() {
         return idBooking;
@@ -39,5 +42,22 @@ public class Bookings implements Serializable {
 
     public void setDateUp(Date dateUp) {
         this.dateUp = dateUp;
+    }
+
+
+    public int getIdCar() {
+        return idCar;
+    }
+
+    public void setIdCar(int idCar) {
+        this.idCar = idCar;
+    }
+
+    public int getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
     }
 }

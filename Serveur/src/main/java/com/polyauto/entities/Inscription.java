@@ -1,5 +1,5 @@
 
-package metier;
+package com.polyauto.entities;
 
 
 import java.io.Serializable;

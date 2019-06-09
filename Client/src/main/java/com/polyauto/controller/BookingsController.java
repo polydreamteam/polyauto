@@ -2,6 +2,8 @@ package com.polyauto.controller;
 
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.polyauto.auth.Authenticator;
+import com.polyauto.dto.ObjectMessageSend;
+import com.polyauto.entities.Bookings;
 import com.polyauto.entities.BookingsEntity;
 import com.polyauto.entities.CarsEntity;
 import com.polyauto.exceptions.BadRequestException;
@@ -16,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.jms.ObjectMessage;
+import java.awt.print.Book;
 import java.sql.Date;
 import java.util.List;
 
@@ -49,7 +53,9 @@ public class BookingsController
     {
         DecodedJWT jwt_decoded = Authenticator.verifyAndDecodeToken(token);
         int tokenUserId = Integer.parseInt(jwt_decoded.getClaim("userId").asString());
-
+        System.out.println(Integer.valueOf(idCar));
+        System.out.println(userId);
+        System.out.println("42424242");
         if(tokenUserId != Integer.valueOf(userId))
         {
             throw new UnauthorizedException();
@@ -72,6 +78,14 @@ public class BookingsController
         newBooking.setDateUp(new Date(utilDate.getTime()));
 
         //TODO Mettre le lien API JBOSS
+        //TODO : Statut voiture
+        Bookings book = new Bookings();
+        book.setDateUp(new Date(utilDate.getTime()));
+        book.setIdUser(Integer.valueOf(userId));
+        book.setIdCar(Integer.valueOf(idCar));
+        book.setStatus(Byte.parseByte("1"));
+        ObjectMessageSend toSend = new ObjectMessageSend(ObjectMessageSend.INSERT, book);
+        TopicPoster.publish(toSend);
 
         //DbManager.saveBooking(newBooking);
 
@@ -112,7 +126,17 @@ public class BookingsController
         java.util.Date utilDate = new java.util.Date();
         booking.setDateDown(new Date(utilDate.getTime()));
 
-        //TODO Mettre le lien API JBOSS
+        Bookings book = new Bookings();
+        book.setStatus(Byte.parseByte("0"));
+        book.setIdCar(booking.getIdCar());
+        book.setIdUser(booking.getIdUser());
+        book.setDateUp(booking.getDateUp());
+        book.setDateDown(new Date(utilDate.getTime()));
+        book.setIdBooking(booking.getIdBooking());
+
+        ObjectMessageSend toSend = new ObjectMessageSend(ObjectMessageSend.UPDATE, book);
+        TopicPoster.publish(toSend);
+
 
         GenericResponse response = new GenericResponse();
 
