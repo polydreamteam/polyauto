@@ -1,7 +1,7 @@
 package dao;
 
-import metier.Cars;
-import metier.CarsEntity;
+import com.polyauto.entities.Cars;
+import com.polyauto.entities.CarsEntity;
 
 public class CarsService extends Service {
 

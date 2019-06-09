@@ -1,5 +1,8 @@
 package com.polyauto.jboss;
 
+import com.polyauto.dto.ObjectMessageSend;
+import com.polyauto.entities.Bookings;
+import com.polyauto.entities.BookingsEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
@@ -27,7 +30,7 @@ public class TopicPoster
 
             tcf = (TopicConnectionFactory) tmp;
             conn = tcf.createTopicConnection("jmsuser", "jmsepul98!");
-            topic = (Topic) iniCtx.lookup("java:jboss/exported/topic/PolyA  utoTopic");
+            topic = (Topic) iniCtx.lookup("java:jboss/exported/topic/PolyAutoTopic");
             // Send the specified number of messages
         } catch (JMSException e) {
             throw e;
@@ -38,7 +41,7 @@ public class TopicPoster
         }
     }
 
-    public static void publish(Serializable object) throws Exception
+    public static void publish(ObjectMessageSend object) throws Exception
     {
         try {
             // Send the specified number of messages

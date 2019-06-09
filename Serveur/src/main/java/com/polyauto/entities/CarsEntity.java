@@ -1,4 +1,4 @@
-package metier;
+package com.polyauto.entities;
 
 import javax.persistence.*;
 import java.util.Objects;

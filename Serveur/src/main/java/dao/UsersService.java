@@ -1,8 +1,8 @@
 package dao;
 
 import meserreurs.MonException;
-import metier.Users;
-import metier.UsersEntity;
+import com.polyauto.entities.Users;
+import com.polyauto.entities.UsersEntity;
 
 public class UsersService extends Service {
 

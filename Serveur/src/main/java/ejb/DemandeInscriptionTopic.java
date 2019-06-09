@@ -1,8 +1,8 @@
 package ejb;
 
 import meserreurs.MonException;
-import metier.Inscription;
-import metier.InscriptionEntity;
+import com.polyauto.entities.Inscription;
+import com.polyauto.entities.InscriptionEntity;
 
 import javax.annotation.Resource;
 import javax.ejb.ActivationConfigProperty;
@@ -25,7 +25,7 @@ import dao.EnregistreInscription;
 /**
  * Message-Driven Bean implementation class for: DemandeInscriptionTopic
  */
-// On se connecte à la file d'attente InscriptionTopic
+// On se connecte ï¿½ la file d'attente InscriptionTopic
 @MessageDriven(activationConfig = {
         @ActivationConfigProperty(propertyName = "destination",
                 propertyValue = "java:jboss/exported/topic/DemandeInscriptionJmsTopic"),
@@ -49,7 +49,7 @@ public class DemandeInscriptionTopic implements MessageListener {
     public void onMessage(Message message)  {
         // TODO Auto-generated method stub
         boolean ok = false;
-        // On gère le message récupéré dans le topic
+        // On gï¿½re le message rï¿½cupï¿½rï¿½ dans le topic
 
         try {
             // On transforme le message en demande d'inscription
@@ -57,15 +57,15 @@ public class DemandeInscriptionTopic implements MessageListener {
             Inscription uneInscription = (Inscription) objectMessage.getObject();
 
             if (message != null) {
-                // On insère cette demande d'inscription dans la base de données
-                // on s'assure que l'écriture ne se fera qu'une fois.
+                // On insï¿½re cette demande d'inscription dans la base de donnï¿½es
+                // on s'assure que l'ï¿½criture ne se fera qu'une fois.
                 message = null;
 
                 try {
 
                     // on construit un objet Entity
                     InscriptionEntity uneInsEntity = new InscriptionEntity();
-                    // on tansfère les données reçues dans l'objet Entity
+                    // on tansfï¿½re les donnï¿½es reï¿½ues dans l'objet Entity
                     uneInsEntity.setNomcandidat(uneInscription.getNomcandidat());
                     uneInsEntity.setPrenomcandidat(uneInscription.getPrenomcandidat());
                     uneInsEntity.setCpostal(uneInscription.getCpostal());
@@ -110,7 +110,7 @@ public class DemandeInscriptionTopic implements MessageListener {
         Date madate = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy hh:mm");
         try {
-            // On écrit à la fin du fichier
+            // On ï¿½crit ï¿½ la fin du fichier
             wr = new BufferedWriter(new FileWriter(nomf, true));
             wr.newLine();
             wr.write(sdf.format(madate));

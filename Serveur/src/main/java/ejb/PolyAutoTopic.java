@@ -1,12 +1,12 @@
 package ejb;
 
-import com.sun.xml.internal.ws.api.message.ExceptionHasMessage;
 import dao.BookingsService;
 import dao.CarsService;
 import dao.Service;
 import dao.UsersService;
-import dto.ObjectMessageSend;
+import com.polyauto.dto.ObjectMessageSend;
 import meserreurs.MonException;
+import com.polyauto.entities.*;
 
 import javax.annotation.Resource;
 import javax.ejb.ActivationConfigProperty;
@@ -24,10 +24,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import metier.Bookings;
-import metier.BookingsEntity;
-import metier.Cars;
-import metier.Users;
 
 /**
  * Message-Driven Bean implementation class for: PolyAutoTopic
@@ -102,23 +98,28 @@ public class PolyAutoTopic implements MessageListener {
 
                 } catch (NamingException er) {
                     System.out.println("Message Naming  :" + er.getMessage());
-                    EcritureErreur(er.getMessage());
+                    er.printStackTrace();
+                    //EcritureErreur(er.getMessage());
                 } catch (MonException e) {
-                    EcritureErreur(e.getMessage());
+                    //EcritureErreur(e.getMessage());
+                    e.printStackTrace();
                     System.out.println("Message MonException :" + e.getMessage());
                 } catch (JMSException  e) {
                     e.printStackTrace();
                     System.err.println("JMSException in onMessage(): " + e.getMessage());
-                    EcritureErreur(e.getMessage());
+                    //EcritureErreur(e.getMessage());
+                    context.setRollbackOnly();
                 } catch (Exception ex) {
+                    ex.printStackTrace();
                     System.out.println("Message Excep :" + ex.getMessage());
-                    EcritureErreur(ex.getMessage());
+                    //EcritureErreur(ex.getMessage());
                 }
             }
 
         } catch (Exception ex) {
             System.out.println("Erreur Cast  :"+ ex.getMessage());
-            EcritureErreur(ex.getMessage());
+            ex.printStackTrace();
+            //EcritureErreur(ex.getMessage());
         }
     }
 
