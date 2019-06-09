@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a86af9f-4389-4192-9815-9ebf8c665fbe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/.idea/dataSources/5bb1afc1-980a-4ad0-86e4-1cf77b92f8b6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/.idea/dataSources/5bb1afc1-980a-4ad0-86e4-1cf77b92f8b6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/.idea/artifacts/Client_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/.idea/artifacts/Client_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/java/com/polyauto/controller/CarsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/com/polyauto/controller/CarsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/java/com/polyauto/entities/CarsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/com/polyauto/entities/CarsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/java/com/polyauto/repositories/CarsEntityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/com/polyauto/repositories/CarsEntityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Web/web/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Web/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/web/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Web/web/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/web/src/app/car-info/car-info.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Web/web/src/app/car-info/car-info.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/web/src/app/car-info/car-info.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Web/web/src/app/car-info/car-info.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/web/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Web/web/src/app/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/web/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Web/web/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/web/src/app/services/car.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Web/web/src/app/services/car.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/web/src/app/profil/profil.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Web/web/src/app/profil/profil.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/web/src/app/profil/profil.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Web/web/src/app/profil/profil.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,41 +25,56 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/web/src/app/home/home.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5">
-              <caret line="26" column="14" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="23" selection-start-line="2" selection-end-line="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/web/src/app/home/home.component.html">
+        <entry file="file://$PROJECT_DIR$/Web/web/src/app/profil/profil.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Web/web/src/app/research-modal/research-modal.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#70#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="374">
+              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Web/web/src/app/research-modal/research-modal.component.html">
+        <entry file="file://$PROJECT_DIR$/Web/web/src/app/profil/profil.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="311">
+              <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/web/src/app/services/profil.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="77" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
+              <folding>
+                <element signature="e#0#60#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/web/src/app/models/profil.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Web/web/src/app/profil/profil.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -73,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web/web/src/app/services/car.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="50" column="8" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+            <state relative-caret-position="238">
+              <caret line="18" column="97" selection-start-line="17" selection-start-column="5" selection-end-line="18" selection-end-column="97" />
               <folding>
                 <element signature="e#0#60#0" expanded="true" />
               </folding>
@@ -91,6 +100,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>favicon</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -101,7 +115,6 @@
         <option value="$PROJECT_DIR$/Web/web/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/Web/web/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/Web/web/src/styles.scss" />
-        <option value="$PROJECT_DIR$/Web/web/src/app/navbar/navbar.component.html" />
         <option value="$PROJECT_DIR$/Web/web/src/app/navbar/navbar.component.ts" />
         <option value="$PROJECT_DIR$/Web/web/src/app/navbar/navbar.component.scss" />
         <option value="$PROJECT_DIR$/Web/web/src/app/home/home.component.scss" />
@@ -118,22 +131,33 @@
         <option value="$PROJECT_DIR$/Web/web/src/app/research-modal/research-modal.component.scss" />
         <option value="$PROJECT_DIR$/Web/web/src/app/home/home.component.html" />
         <option value="$PROJECT_DIR$/Web/web/src/app/services/car.service.ts" />
-        <option value="$PROJECT_DIR$/Web/web/src/app/home/home.component.ts" />
         <option value="$PROJECT_DIR$/Web/web/src/app/research-modal/research-modal.component.ts" />
         <option value="$PROJECT_DIR$/Web/web/src/app/research-modal/research-modal.component.html" />
+        <option value="$PROJECT_DIR$/Web/web/src/app/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/Web/web/src/app/navbar/navbar.component.html" />
+        <option value="$PROJECT_DIR$/Web/web/src/app/home/home.component.ts" />
+        <option value="$PROJECT_DIR$/Web/web/src/app/services/profil.service.ts" />
+        <option value="$PROJECT_DIR$/Web/web/src/app/models/profil.ts" />
+        <option value="$PROJECT_DIR$/Web/web/src/index.html" />
+        <option value="$PROJECT_DIR$/Web/web/src/app/services/resa.ts" />
+        <option value="$PROJECT_DIR$/Web/web/src/app/profil/profil.component.scss" />
+        <option value="$PROJECT_DIR$/Web/web/src/app/profil/profil.component.html" />
+        <option value="$PROJECT_DIR$/Web/web/src/app/profil/profil.component.ts" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="width" value="978" />
-    <option name="height" value="1050" />
+    <option name="x" value="63" />
+    <option name="y" value="78" />
+    <option name="width" value="1929" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -175,15 +199,6 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="car-info" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="polyauto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="polyauto" type="462c0819:PsiDirectoryNode" />
-              <item name="Web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -193,7 +208,16 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="research-modal" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="polyauto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="polyauto" type="462c0819:PsiDirectoryNode" />
+              <item name="Web" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="profil" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="polyauto" type="b2602c69:ProjectViewProjectNode" />
@@ -208,7 +232,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -224,6 +247,8 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Philippine CLUNIAT\Desktop\CLUNIAT\4A INFO\InfoRepartie\polyauto\Web\web\src\app\services" />
+      <recent name="C:\Users\Philippine CLUNIAT\Desktop\CLUNIAT\4A INFO\InfoRepartie\polyauto\Web\web\src\app\models" />
+      <recent name="C:\Users\Philippine CLUNIAT\Desktop\CLUNIAT\4A INFO\InfoRepartie\polyauto\Web\web\src\app\profil" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -275,12 +300,13 @@
       <workItem from="1557478347510" duration="43000" />
       <workItem from="1557986958484" duration="12181000" />
       <workItem from="1558444989730" duration="3677000" />
-      <workItem from="1559649891943" duration="15059000" />
+      <workItem from="1559649891943" duration="20286000" />
+      <workItem from="1559803237379" duration="3944000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45938000" />
+    <option name="totallyTimeSpent" value="56163000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -293,9 +319,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.20738254" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23825504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -412,9 +437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/web/src/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/web/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -426,13 +448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/web/src/app/navbar/navbar.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -479,49 +494,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/web/src/app/navbar/navbar.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/web/src/app/app-routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/web/src/app/login-page/login-page.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/web/src/app/models/car.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/web/src/app/services/connexion.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -567,30 +545,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/web/src/app/home/home.component.html">
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/app-routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/web/src/app/home/home.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="26" column="14" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="14" />
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/web/src/app/services/car.service.ts">
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/research-modal/research-modal.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="8" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
@@ -604,10 +572,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web/web/src/app/research-modal/research-modal.component.html">
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/home/home.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="476">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/navbar/navbar.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/navbar/navbar.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/services/connexion.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" lean-forward="true" selection-end-line="30" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/models/car.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/services/car.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="97" selection-start-line="17" selection-start-column="5" selection-end-line="18" selection-end-column="97" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/web/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/services/resa.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/profil/profil.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/models/profil.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/profil/profil.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/services/profil.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="77" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/web/src/app/profil/profil.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
         </state>
       </provider>
     </entry>

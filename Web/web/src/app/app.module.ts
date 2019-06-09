@@ -14,6 +14,7 @@ import {ConnexionService} from "./services/connexion.service";
 import {HttpClientModule} from "@angular/common/http";
 import {CarService} from "./services/car.service";
 import { ResearchModalComponent } from './research-modal/research-modal.component';
+import { ProfilComponent } from './profil/profil.component';
 
 
 
@@ -24,7 +25,8 @@ import { ResearchModalComponent } from './research-modal/research-modal.componen
     HomeComponent,
     NavbarComponent,
     CarInfoComponent,
-    ResearchModalComponent
+    ResearchModalComponent,
+    ProfilComponent
   ],
   imports: [
     BrowserModule,
