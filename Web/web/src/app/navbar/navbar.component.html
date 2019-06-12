@@ -1,6 +1,9 @@
-<div *ngIf="isConnected" class="navbar">
-  <a [routerLink]="['/login']" class="menu">DECONNEXION</a>
-  <a [routerLink]="['/profil']" [ngClass]="profilClass">MON PROFIL</a>
-  <a [routerLink]="['/']" [ngClass]="rechercheClass">RECHERCHER</a>
-  <img [routerLink]="['/']" src="../../assets/pictures/polyauto.png" alt="polyauto"/>
+<div class="navbar">
+  <a [routerLink]="['/login']" (click)="logout()" class="menu text">DECONNEXION</a>
+  <a [routerLink]="['/login']" (click)="logout()" class="menu icon"><fa-icon [icon]="faPowerOff"></fa-icon> </a>
+  <a [routerLink]="['/profil']" [ngClass]="[getCurrentPage('profil'), 'text']">MON PROFIL</a>
+  <a [routerLink]="['/profil']" [ngClass]="[getCurrentPage('profil'), 'icon']"><fa-icon [icon]="faUser"></fa-icon></a>
+  <a [routerLink]="['/home']" [ngClass]="[getCurrentPage('home'), 'text']">RECHERCHER</a>
+  <a [routerLink]="['/home']" [ngClass]="[getCurrentPage('home'), 'icon']"><fa-icon [icon]="faSearch"></fa-icon></a>
+  <img [routerLink]="['/home']" src="../../assets/pictures/polyauto.png" alt="polyauto"/>
 </div>

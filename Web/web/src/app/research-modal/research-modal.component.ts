@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {CarService} from "../services/car.service";
+import {CarService} from '../services/car.service';
 import {faCar, faUser} from '@fortawesome/free-solid-svg-icons';
 
 
@@ -11,12 +11,12 @@ import {faCar, faUser} from '@fortawesome/free-solid-svg-icons';
 export class ResearchModalComponent implements OnInit {
 
   @Output()
-  visible = new EventEmitter()
+  visible = new EventEmitter();
   @Output()
-  researched = new EventEmitter<number[]>()
+  researched = new EventEmitter<string[]>();
   faCar = faCar;
   model: number;
-  status: number = 1;
+  status = '1';
 
 
   constructor(public carService: CarService) {
@@ -26,12 +26,12 @@ export class ResearchModalComponent implements OnInit {
   }
 
   setVisible() {
-    this.visible.emit()
+    this.visible.emit();
   }
 
   research() {
-    this.researched.emit([this.status, this.model])
-    this.setVisible()
+    this.researched.emit([this.status, (this.model || '').toString()]);
+    this.setVisible();
   }
 
 }

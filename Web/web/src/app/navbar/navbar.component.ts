@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 import { Location } from '@angular/common';
+import {faPowerOff} from '@fortawesome/free-solid-svg-icons';
+import {faSearch} from '@fortawesome/free-solid-svg-icons';
+import {faUser} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -9,32 +12,25 @@ import { Location } from '@angular/common';
 })
 export class NavbarComponent implements OnInit {
 
-  isConnected: boolean = true;
-  profilClass: string = "menu";
-  rechercheClass: string = "menu";
+  faPowerOff = faPowerOff;
+  faSearch = faSearch;
+  faUser = faUser;
 
-  constructor(private router: Router, private location:Location) { }
+  constructor(private router: Router, private location: Location) { }
 
-  ngOnInit() {
-    this.setConnected();
-    this.getCurrentPage();
-    console.log(this.isConnected)
+  ngOnInit() {}
+
+
+
+  logout() {
+    localStorage.clear();
   }
 
-  setConnected() {
-    //TODO : Getconnected
-  }
-
-  getCurrentPage() {
-
-    if(this.location.path().includes("login")){
-        this.isConnected = false;
-    }
-    else if(this.location.path().includes("profil")){
-      this.profilClass = "menu current";
-    }
-    else {
-      this.rechercheClass = "menu current";
+  getCurrentPage(path: string) {
+    if (this.location.path().includes(path)) {
+      return 'menu current';
+    } else {
+      return 'menu';
     }
   }
 

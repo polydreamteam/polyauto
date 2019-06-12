@@ -15,12 +15,29 @@
     font-weight: bold;
     font-size: 30px;
     cursor: pointer;
+    @media screen and (max-width: 950px) and (min-width: 830px) {
+      font-size: 25px;
+    }
     &:hover {
       color: $orange;
+    }
+    &.text {
+      @media screen and (max-width: 830px) {
+        display: none;
+      }
+    }
+    &.icon {
+      display: none;
+      @media screen and (max-width: 830px) {
+        display: flex;
+      }
     }
     &.current {
       color: $orange;
       font-size: 40px;
+      @media screen and (max-width: 950px) and (min-width: 830px) {
+        font-size: 35px;
+      }
     }
   }
 }

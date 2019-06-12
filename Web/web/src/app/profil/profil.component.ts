@@ -2,9 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import {faStar as solidStar} from '@fortawesome/free-solid-svg-icons';
 import {faPen} from '@fortawesome/free-solid-svg-icons';
 import {faStar} from '@fortawesome/free-regular-svg-icons';
-import {ProfilService} from "../services/profil.service";
-import {Profil} from "../models/profil";
-import {Resa} from "../services/resa";
+import {faCheck} from '@fortawesome/free-solid-svg-icons';
+import {ProfilService} from '../services/profil.service';
+import {Profil} from '../models/profil';
+import {Resa} from '../models/resa';
+import {CarService} from '../services/car.service';
+import {BookingService} from '../services/booking.service';
+import {ConnexionService} from '../services/connexion.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -14,37 +19,53 @@ import {Resa} from "../services/resa";
 })
 export class ProfilComponent implements OnInit {
 
-  faSolidStar = solidStar
-  faRegularStar = faStar
-  faPen = faPen
-  profil: Profil
-  resas: Resa[]
+  faSolidStar = solidStar;
+  faRegularStar = faStar;
+  faPen = faPen;
+  faCheck = faCheck;
+  profil: Profil;
+  resas: Resa[];
+  isEditing = false;
 
-
-  constructor(private profilService: ProfilService) { }
+  constructor(private profilService: ProfilService,
+              public carService: CarService,
+              private bookingService: BookingService,
+              private router: Router) { }
 
   ngOnInit() {
-    this.getProfile()
+    if (localStorage.length === 0) {
+      this.router.navigateByUrl('/login');
+    } else {
+      this.getProfile();
+    }
   }
 
   getProfile() {
     this.profilService.getProfil().subscribe(
       data => {
-        this.profil = data.content.user
-        this.resas = data.content.bookings
-        console.log(this.resas)
+        this.profil = data.content.user;
+        this.resas = data.content.bookings.slice(0, 4);
       },
       err => {
-        console.log(err)
-      })
+        console.log(err);
+      });
   }
 
 
   editProfile() {
-    //TODO: edit profil function
+    this.isEditing = true;
   }
 
+  saveProfil() {
+    this.profilService.updateProfil(this.profil).subscribe(
+      () => {
+        this.isEditing = false;
+      }
+    );
+  }
+
+
   editResa(event) {
-    //TODO: edit resa
+    this.bookingService.closeBooking(event.idBooking);
   }
 }

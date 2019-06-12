@@ -27,7 +27,7 @@ public class AuthenticationController
     @Autowired
     private UsersEntityRepository usersRepository;
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @RequestMapping(method = RequestMethod.POST,value="/login",produces="application/json")
     public GenericResponse login(@RequestParam String login, @RequestParam String password) throws RuntimeException
     {
@@ -54,6 +54,7 @@ public class AuthenticationController
 
             response.addToContent("token",token);
             response.addToContent("isAdmin",String.valueOf(user.getAdmin()));
+            response.addToContent("userId",String.valueOf(user.getIdUser()));
             return response;
 
         } catch (JWTCreationException exception){
