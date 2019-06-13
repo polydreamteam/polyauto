@@ -1,6 +1,7 @@
 package com.polyauto.controller;
 
 import com.auth0.jwt.interfaces.DecodedJWT;
+import com.google.common.hash.Hashing;
 import com.polyauto.auth.Authenticator;
 import com.polyauto.entities.BookingsEntity;
 import com.polyauto.entities.CarsEntity;
@@ -13,8 +14,11 @@ import com.polyauto.utilities.GenericResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @RestController
@@ -60,6 +64,47 @@ public class AdminController
         request.setAttribute("nbBookings",bookingsRepository.count());
 
         return new ModelAndView("admin/index");
+    }
+
+    @CrossOrigin(origins = "*")
+    @RequestMapping(method = RequestMethod.POST,value="/admin/loginConfirm")
+    public RedirectView login(HttpServletRequest request,RedirectAttributes attributes) throws RuntimeException
+    {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+        UsersEntity user =  usersRepository.findByLogin(username);
+
+        if(user == null)
+        {
+            return new RedirectView("/PolyAuto/admin/login");
+        }
+
+        String receivedHash = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
+
+        if(!receivedHash.equals(user.getPassword()) || user.getAdmin() != 1)
+        {
+            return new RedirectView("/PolyAuto/admin/login");
+        }
+
+        String token = Authenticator.buildToken(user);
+
+        attributes.addAttribute("token", token);
+        return new RedirectView("/PolyAuto/admin");
+    }
+
+    @CrossOrigin(origins = "*")
+    @RequestMapping(method = RequestMethod.GET,value="/admin/logout")
+    public RedirectView logout(HttpServletRequest request) throws RuntimeException
+    {
+        return new RedirectView("/PolyAuto/admin/login");
+    }
+
+    @CrossOrigin(origins = "*")
+    @RequestMapping(method = RequestMethod.GET,value="/admin/login")
+    public ModelAndView loginForm(HttpServletRequest request) throws RuntimeException
+    {
+        return new ModelAndView("admin/login");
     }
 
     @CrossOrigin(origins = "*")

@@ -10,10 +10,10 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light ">
+        <nav style="background-color: #F2ECD6;" class="navbar navbar-expand-lg navbar-light ">
             <div class="container">
                 <div class="navbar-brand" href="#">
-                    <span>LE LOGO</span>
+                    <span><img style="max-width: 10%" src="/PolyAuto/images/polyauto.png"></span>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainnav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -32,6 +32,9 @@
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="/PolyAuto/admin/bookings?token=${token}">RESERVATIONS</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/PolyAuto/admin/logout"><i class="fas fa-sign-out-alt"></i></a>
                         </li>
                     </ul>
                 </div>

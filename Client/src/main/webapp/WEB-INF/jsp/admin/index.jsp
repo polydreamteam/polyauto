@@ -10,11 +10,11 @@
 
 <t:admin>
     <jsp:body>
-        <h1 class="mb-5">Dashboard PolyAuto</h1>
+        <h1 class="mb-5 mt-5">Dashboard PolyAuto</h1>
         <div class="row">
         <div class="card col mr-3" id="cars-card">
             <div class="card-body">
-                <i class="fas fa-car"> ${nbCars} voitures dans le parc</i>
+                <i class="fas fa-car"></i> ${nbCars} voitures dans le parc
             </div>
             <a href="/PolyAuto/admin/cars?token=${token}" class="card-link"><i class="fas fa-arrow-right"></i></a>
         </div>
