@@ -460,7 +460,6 @@
                 <jms-queue name="FileMessages" entries="java:jboss/exported/jms/queue/FileMessages"/>
                 <jms-queue name="DLQ" entries="java:/jms/queue/DLQ"/>
                 <jms-topic name="PolyAutoTopic" entries="java:jboss/exported/topic/PolyAutoTopic"/>
-                <jms-topic name="DemandeInscriptionJmsTopic" entries="java:jboss/exported/topic/DemandeInscriptionJmsTopic"/>
                 <connection-factory name="InVmConnectionFactory" entries="java:/ConnectionFactory" connectors="in-vm"/>
                 <connection-factory name="RemoteConnectionFactory" entries="java:jboss/exported/jms/RemoteConnectionFactory" connectors="http-connector"/>
                 <pooled-connection-factory name="activemq-ra" entries="java:/JmsXA java:jboss/DefaultJMSConnectionFactory" connectors="in-vm" transaction="xa"/>
