@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="PolyAutoServeur">
-    <output-path>$PROJECT_DIR$/out/artifacts/PolyAutoServeur</output-path>
-    <root id="archive" name="PolyAutoServeur.jar">
-      <element id="module-output" name="PolyAutoServeur" />
-    </root>
-  </artifact>
-</component>
