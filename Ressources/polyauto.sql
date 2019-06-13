@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  sam. 08 juin 2019 à 13:01
+-- Généré le :  jeu. 13 juin 2019 à 19:46
 -- Version du serveur :  10.1.37-MariaDB
 -- Version de PHP :  7.3.1
 
@@ -22,8 +22,13 @@ SET time_zone = "+00:00";
 -- Base de données :  `polyauto`
 --
 
+GRANT ALL PRIVILEGES ON *.* TO 'polyauto'@'localhost' IDENTIFIED BY 'polyauto';
+GRANT ALL PRIVILEGES ON *.* TO 'polyautojms'@'localhost' IDENTIFIED BY 'polyautojms';
+
+CREATE DATABASE IF NOT EXISTS `polyauto` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `polyauto`;
+
 -- --------------------------------------------------------
-CREATE USER 'polyauto'@'localhost' IDENTIFIED VIA mysql_native_password USING '***';GRANT ALL PRIVILEGES ON *.* TO 'polyauto'@'localhost' REQUIRE NONE WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
 
 --
 -- Structure de la table `bookings`
@@ -35,7 +40,7 @@ CREATE TABLE `bookings` (
   `idUser` int(11) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '0',
   `dateUp` date NOT NULL,
-  `dateDown` date NOT NULL
+  `dateDown` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -43,12 +48,10 @@ CREATE TABLE `bookings` (
 --
 
 INSERT INTO `bookings` (`idBooking`, `idCar`, `idUser`, `status`, `dateUp`, `dateDown`) VALUES
-(1, 1, 1, 1, '2019-06-14', '0000-00-00'),
-(2, 4, 1, 1, '2019-05-28', '0000-00-00'),
+(1, 1, 1, 1, '2019-06-14', NULL),
 (3, 3, 2, 0, '2019-05-28', '2019-05-30'),
 (4, 6, 2, 0, '2019-05-28', '2019-05-30'),
-(5, 1, 3, 0, '2019-05-28', '2019-05-30'),
-(6, 2, 3, 1, '2019-05-28', '0000-00-00');
+(5, 1, 3, 0, '2019-05-28', '2019-05-30');
 
 -- --------------------------------------------------------
 
@@ -178,7 +181,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `idBooking` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idBooking` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `cars`
