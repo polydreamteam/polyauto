@@ -52,9 +52,7 @@ public class BookingsController
     {
         DecodedJWT jwt_decoded = Authenticator.verifyAndDecodeToken(token);
         int tokenUserId = Integer.parseInt(jwt_decoded.getClaim("userId").asString());
-        System.out.println(Integer.valueOf(idCar));
-        System.out.println(userId);
-        System.out.println("42424242");
+
         if(tokenUserId != Integer.valueOf(userId))
         {
             throw new UnauthorizedException();
@@ -64,29 +62,26 @@ public class BookingsController
 
         if(car == null)
         {
+            //HTTP 400
             throw new BadRequestException();
         }
 
         BookingsEntity newBooking = new BookingsEntity();
         newBooking.setIdUser(Integer.valueOf(userId));
         newBooking.setIdCar(Integer.valueOf(idCar));
-
         newBooking.setStatus(Byte.parseByte("1"));
-
         java.util.Date utilDate = new java.util.Date();
         newBooking.setDateUp(new Date(utilDate.getTime()));
 
-        //TODO Mettre le lien API JBOSS
-        //TODO : Statut voiture
         Bookings book = new Bookings();
         book.setDateUp(new Date(utilDate.getTime()));
         book.setIdUser(Integer.valueOf(userId));
         book.setIdCar(Integer.valueOf(idCar));
         book.setStatus(Byte.parseByte("1"));
+
+        //Enregistrement sur le topic
         ObjectMessageSend toSend = new ObjectMessageSend(ObjectMessageSend.INSERT, book);
         TopicPoster.publish(toSend);
-
-        //DbManager.saveBooking(newBooking);
 
         GenericResponse response = new GenericResponse();
 

@@ -6,7 +6,7 @@ import java.util.Objects;
 import java.util.Random;
 
 /*
-Posted on stackOverflow by erickson
+Génération d'une chaîne de caractères aléatoires
  */
 public class RandomString
 {
@@ -54,13 +54,5 @@ public class RandomString
      */
     public RandomString(int length) {
         this(length, new SecureRandom());
-    }
-
-    /**
-     * Create session identifiers.
-     */
-    public RandomString()
-    {
-        this(21);
     }
 }

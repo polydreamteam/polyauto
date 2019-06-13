@@ -17,6 +17,10 @@ import javax.annotation.PostConstruct;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
+/**
+ * Classe Authenticator
+ * Gère tous les services liés aux tokens
+ */
 @Service
 public class Authenticator
 {
@@ -25,12 +29,21 @@ public class Authenticator
 
     private static Environment env;
 
+
+    /**
+     * Initialise l'environnment dans le contexte statique
+     */
     @PostConstruct
     private void initAuthenticator()
     {
         env = env0;
     }
 
+    /**
+     * @param token le token à décodé
+     * @return DecodedJWT le token décodé
+     * @throws RuntimeException
+     */
     public static DecodedJWT verifyAndDecodeToken(String token) throws RuntimeException
     {
         try {
@@ -47,6 +60,8 @@ public class Authenticator
             String login = jwt.getClaim("user").asString();
             String userId = jwt.getClaim("userId").asString();
             String nonce = jwt.getClaim("nonce").asString();
+
+            //Vérification de la chaine de vérification
             String verification = generateVerificationString(login,userId,nonce);
 
             if(!verification.equals(jwt.getClaim("verification").asString()))
@@ -60,25 +75,38 @@ public class Authenticator
         }
         catch (JWTVerificationException exception)
         {
+            //Si l'authentification a échoué on renvoie une 400
             System.out.println(exception.getMessage());
             throw new UnauthorizedException();
         }
 
     }
 
+    /**
+     * @param login
+     * @param userId
+     * @param nonce Un nombre aléatoire à usage uniqye
+     * @return le token
+     */
     public static String generateVerificationString(String login,String userId,String nonce)
     {
         return Hashing.sha256().hashString(login+nonce+userId+nonce+env.getProperty("polyauto.verificationKey"), StandardCharsets.UTF_8).toString();
     }
 
+    /**
+     * @param user
+     * @return
+     */
     public static String buildToken(UsersEntity user)
     {
         Algorithm algorithm = Algorithm.HMAC256(env.getProperty("polyauto.secretKey"));
 
+        //Le nonce va servir à créer une clé de vériication uniuque pour permettre une double authentification du jwt
         String nonce = new RandomString(64).nextString();
 
         String verification = generateVerificationString(user.getLogin(),String.valueOf(user.getIdUser()),nonce);
 
+        //Ajout de tous les claims
         String token = JWT.create()
                 .withClaim("user",user.getLogin())
                 .withClaim("userId",String.valueOf(user.getIdUser()))

@@ -21,6 +21,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
+/**
+ * Controller pour toutes les routes relatives à l'admin
+ */
 @RestController
 public class AdminController
 {
@@ -54,6 +57,7 @@ public class AdminController
 
         if(!isAdmin.equals("1"))
         {
+            //HTTP 401
             throw new UnauthorizedException();
         }
 
@@ -77,6 +81,7 @@ public class AdminController
 
         if(user == null)
         {
+            //HTTP 401
             return new RedirectView("/PolyAuto/admin/login");
         }
 
@@ -116,6 +121,7 @@ public class AdminController
 
         if(!isAdmin.equals("1"))
         {
+            //HTTP 401
             throw new UnauthorizedException();
         }
 
@@ -135,6 +141,7 @@ public class AdminController
 
         if(!isAdmin.equals("1"))
         {
+            //HTTP 401
             throw new UnauthorizedException();
         }
 
@@ -154,6 +161,7 @@ public class AdminController
 
         if(!isAdmin.equals("1"))
         {
+            //HTTP 401
             throw new UnauthorizedException();
         }
 

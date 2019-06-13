@@ -21,6 +21,9 @@ import com.polyauto.repositories.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
+/**
+ * Route d'authenficiation pour les clients API
+ */
 @RestController
 public class AuthenticationController
 {
@@ -31,18 +34,21 @@ public class AuthenticationController
     @RequestMapping(method = RequestMethod.POST,value="/login",produces="application/json")
     public GenericResponse login(@RequestParam String login, @RequestParam String password) throws RuntimeException
     {
-        //
+        //Rrécupération utilisateur
         UsersEntity user =  usersRepository.findByLogin(login);
 
         if(user == null)
         {
+            //HTTP 401
             throw new UnauthorizedException();
         }
 
+        //Vérification mot de passe
         String receivedHash = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
 
         if(!receivedHash.equals(user.getPassword()))
         {
+            //HTTP 401
             throw new UnauthorizedException();
         }
 
@@ -52,6 +58,7 @@ public class AuthenticationController
 
             String token = Authenticator.buildToken(user);
 
+            //Renvoi du token à l'api
             response.addToContent("token",token);
             response.addToContent("isAdmin",String.valueOf(user.getAdmin()));
             response.addToContent("userId",String.valueOf(user.getIdUser()));
@@ -59,6 +66,7 @@ public class AuthenticationController
 
         } catch (JWTCreationException exception){
             System.out.println(exception.getMessage());
+            //HTTP 500
             throw new InternalServerErrorException();
         }
     }

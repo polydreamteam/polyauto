@@ -2,6 +2,9 @@ package com.polyauto.dto;
 
 import java.io.Serializable;
 
+/**
+ * Objet permettant la communication avec le serveur JMS
+ */
 public class ObjectMessageSend implements Serializable {
 
     public static final String UPDATE = "update";
